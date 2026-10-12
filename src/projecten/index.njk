@@ -1,0 +1,43 @@
+---
+layout: layouts/base.njk
+title: Plannen en projecten
+permalink: /projecten/
+
+seoTitel: "Plannen en projecten – Bloemerstraat Nijmegen"
+description: "Graffiti verwijderen, gevels opknappen, meer groen en een levendiger straatbeeld in de Bloemerstraat in Nijmegen. Per project de status en hoe je meedoet."
+---
+{% from "components/macros.njk" import statusBadge, projectKaart, nieuwsbriefCta %}
+<div class="wrap">
+  <header class="page-intro">
+    <h1>Plannen en projecten</h1>
+    <p class="lead">Wat er loopt en wat we graag willen. Bij elk project zie je de status, zodat duidelijk is wat al gebeurt en wat nog een idee is.</p>
+  </header>
+
+  <section class="sectie" aria-labelledby="statussen-titel">
+    <h2 id="statussen-titel" class="h3">Wat betekenen de statussen?</h2>
+    <dl class="statuslegenda">
+      {%- for sleutel, s in statussen %}
+      <div>
+        <dt>{{ statusBadge(sleutel, statussen) }}</dt>
+        <dd>{{ s.uitleg }}</dd>
+      </div>
+      {%- endfor %}
+    </dl>
+  </section>
+
+  {%- for sleutel, s in statussen %}
+  {%- set groep = collections.projecten | metStatus(sleutel) %}
+  {%- if groep.length %}
+  <section class="sectie" aria-labelledby="groep-{{ sleutel }}">
+    <h2 id="groep-{{ sleutel }}">{{ s.label }}</h2>
+    <div class="kaarten">
+      {%- for project in groep %}
+      {{ projectKaart(project, statussen) }}
+      {%- endfor %}
+    </div>
+  </section>
+  {%- endif %}
+  {%- endfor %}
+
+  {{ nieuwsbriefCta(site) }}
+</div>

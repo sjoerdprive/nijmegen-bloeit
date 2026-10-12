@@ -1,0 +1,73 @@
+{#- Paginatitel voor zoekmachines: "seoTitel" uit de front matter, anders "titel | naam". -#}
+{%- set paginaTitel = seoTitel or ((title + " | " + site.naam) if title else site.naam) -%}
+{%- set paginaOmschrijving = description or site.omschrijving -%}
+{%- set canoniek = page.url | absoluteUrl(site.url) -%}
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ paginaTitel }}</title>
+  <meta name="description" content="{{ paginaOmschrijving }}">
+  {%- if noindex %}
+  <meta name="robots" content="noindex">
+  {%- endif %}
+  <link rel="canonical" href="{{ canoniek }}">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="nl_NL">
+  <meta property="og:site_name" content="{{ site.naam }}">
+  <meta property="og:title" content="{{ title or site.naam }}">
+  <meta property="og:description" content="{{ paginaOmschrijving }}">
+  <meta property="og:url" content="{{ canoniek }}">
+  <meta name="theme-color" content="#2b5e34">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/css/style.css">
+  {%- if page.url == "/" %}
+  <script type="application/ld+json">{{ structuredData | dump | safe }}</script>
+  {%- endif %}
+</head>
+<body>
+  <a class="skiplink" href="#inhoud">Direct naar de inhoud</a>
+
+  <header class="site-header">
+    <div class="wrap site-header__inner">
+      <a class="logo" href="/"{% if page.url == "/" %} aria-current="page"{% endif %}>
+        <svg class="logo__mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path d="M16 29V15" /><path d="M16 15c0-5 3-8 8-9-1 5-3 8-8 9Z" /><path d="M16 21c0-4-3-6-7-7 1 4 3 6 7 7Z" /></svg>
+        <span>{{ site.naam }}</span>
+      </a>
+      <nav class="site-nav" aria-label="Hoofdmenu">
+        <ul>
+          {%- for item in site.navigatie %}
+          <li><a href="{{ item.url }}"{% if page.url == item.url or (item.url != "/" and page.url.startsWith(item.url)) %} aria-current="page"{% endif %}>{{ item.titel }}</a></li>
+          {%- endfor %}
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="inhoud" tabindex="-1">
+    {{ content | safe }}
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap site-footer__inner">
+      <div>
+        <p class="site-footer__naam">{{ site.naam }}</p>
+        <p>{{ site.slogan }}</p>
+        <p class="site-footer__disclaimer">Een onafhankelijk buurtinitiatief. Dit is geen website van de gemeente Nijmegen.</p>
+      </div>
+      <nav aria-label="Voettekst">
+        <ul>
+          <li><a href="/projecten/">Plannen en projecten</a></li>
+          <li><a href="/wegwijzer/">Wegwijzer voor de buurt</a></li>
+          <li><a href="/over/">Over het initiatief</a></li>
+          <li><a href="/nieuwsbrief/">Nieuwsbrief en veelgestelde vragen</a></li>
+          <li><a href="/privacy/">Privacyverklaring</a></li>
+          <li><a href="/sitemap/">Sitemap</a></li>
+        </ul>
+      </nav>
+      <p class="site-footer__cookies">Deze website plaatst geen cookies en gebruikt geen tracking.</p>
+    </div>
+  </footer>
+</body>
+</html>

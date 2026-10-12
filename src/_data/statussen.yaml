@@ -1,0 +1,19 @@
+# Projectstatussen. De sleutel (bijv. "lopend") gebruik je in een projectbestand
+# bij "status:". Het symbool (vol, half, kwart of leeg) is een extra visuele hint;
+# de tekst is leidend.
+lopend:
+  label: Lopend
+  symbool: vol
+  uitleg: De activiteit is daadwerkelijk gestart.
+in-voorbereiding:
+  label: In voorbereiding
+  symbool: half
+  uitleg: Er worden concrete stappen gezet.
+belangstelling:
+  label: Belangstelling inventariseren
+  symbool: kwart
+  uitleg: Deelname of draagvlak moet nog worden onderzocht.
+idee:
+  label: Idee
+  symbool: leeg
+  uitleg: Een mogelijke toekomstige activiteit.

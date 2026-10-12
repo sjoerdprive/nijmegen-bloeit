@@ -1,0 +1,71 @@
+---
+layout: layouts/base.njk
+foto:
+  src: ""
+  alt: ""
+  beschrijving: de Bloemerstraat, bijvoorbeeld gezien vanaf Plein 1944
+seoTitel: "Nijmegen Bloeit – buurtinitiatief voor de Bloemerstraat, Nijmegen"
+description: "Buurtinitiatief voor de Bloemerstraat in de binnenstad van Nijmegen. Samen werken aan een schonere, groenere en levendigere straat, te beginnen met graffiti."
+---
+{% from "components/macros.njk" import statusBadge, nieuwsbriefCta, projectKaart, afbeelding %}
+{%- set graffiti = collections.projecten | metStatus("lopend") | first -%}
+<section class="hero" aria-labelledby="hero-titel">
+  <div class="wrap hero__inner">
+    <div class="hero__tekst">
+    <p class="hero__kicker">Buurtinitiatief in de binnenstad van Nijmegen</p>
+    <h1 id="hero-titel" class="hero__titel">{{ site.slogan }}</h1>
+    <p class="hero__intro">Nijmegen Bloeit wil samen met bewoners, ondernemers en pandeigenaren werken aan een aantrekkelijkere, schonere en levendigere Bloemerstraat en omgeving in Nijmegen. We beginnen concreet, met het verwijderen van graffiti.</p>
+    <p><a class="button" href="{{ site.nieuwsbrief.url }}">{{ site.nieuwsbrief.knoptekst }}<span class="visually-hidden"> (externe website van Zendlijst)</span></a></p>
+    <p class="hero__noot">Inschrijven gaat via de externe dienst Zendlijst. <a href="/privacy/">Lees hoe we met je gegevens omgaan</a>.</p>
+    </div>
+    {{ afbeelding(foto, site, "hero") }}
+  </div>
+</section>
+
+<div class="wrap">
+  <section class="sectie twee-kolommen" aria-labelledby="waarom-titel">
+    <h2 id="waarom-titel">Waarom dit initiatief?</h2>
+    <div class="prose">
+      <p>De Bloemerstraat is een straat met mogelijkheden, maar er is ook werk aan de winkel: graffiti, gevels die een opknapbeurt kunnen gebruiken en weinig groen.</p>
+      <p>Nijmegen Bloeit wil die verbeteringen bundelen: met kleine, concrete stappen en met bewoners, ondernemers en eigenaren die het initiatief steunen. Hoe meer mensen betrokken zijn, hoe meer we samen kunnen aanpakken. Het initiatief staat nog aan het begin en wordt op dit moment door één persoon getrokken. <a href="/over/">Lees meer over het initiatief</a>.</p>
+    </div>
+  </section>
+
+  <section class="sectie uitgelicht" aria-labelledby="nu-titel">
+    <p class="uitgelicht__label">Wat er nu gebeurt</p>
+    <h2 id="nu-titel">{{ graffiti.data.title }}</h2>
+    <p>{{ statusBadge(graffiti.data.status, statussen) }}</p>
+    <p>{{ graffiti.data.samenvatting }}</p>
+    <p><a href="{{ graffiti.url }}">Lees meer over het graffitiproject en hoe je kunt helpen</a></p>
+  </section>
+
+  <section class="sectie" aria-labelledby="plannen-titel">
+    <h2 id="plannen-titel">Plannen voor later</h2>
+    <p class="sectie__intro">Dit zijn ambities en ideeën. Ze zijn nog niet gestart en er is niets toegezegd.</p>
+    <div class="kaarten">
+      {%- for project in collections.projecten %}{% if project.data.status != "lopend" %}
+      {{ projectKaart(project, statussen) }}
+      {%- endif %}{% endfor %}
+    </div>
+    <p><a href="/projecten/">Bekijk alle plannen en projecten</a></p>
+  </section>
+
+  {{ nieuwsbriefCta(site) }}
+
+  <section class="sectie twee-kolommen" aria-labelledby="helpen-titel">
+    <h2 id="helpen-titel">Wil je ook helpen organiseren?</h2>
+    <div class="prose">
+      <p>Dat stellen we zeer op prijs. Het initiatief staat nog aan het begin en wordt momenteel door één persoon getrokken. We willen eerst ontdekken hoeveel belangstelling er is. Naarmate het initiatief groeit, creëren we meer mogelijkheden om mee te helpen, ideeën aan te dragen en projecten te organiseren.</p>
+      <p>Op dit moment kun je je alleen inschrijven voor de nieuwsbrief. Later openen we kanalen om actiever deel te nemen. <a href="/nieuwsbrief/">Lees de veelgestelde vragen</a>.</p>
+    </div>
+  </section>
+
+  <section class="sectie twee-kolommen" aria-labelledby="zelf-titel">
+    <h2 id="zelf-titel">Aan de slag in de buurt</h2>
+    <div class="prose">
+      <p>Ben je bewoner, ondernemer of pandeigenaar? In de wegwijzer van Nijmegen Bloeit vind je gemeentelijke regelingen voor gevels en groen, en lees je hoe je graffiti, zwerfafval en kapotte voorzieningen meldt.</p>
+      <p>Nijmegen Bloeit wil plannen van buren, ondernemers en eigenaren gaan bundelen: samenwerken levert soms ook meer subsidie op. Via de nieuwsbrief hoor je wanneer dat kan.</p>
+      <p><a href="/wegwijzer/">Naar de wegwijzer voor de buurt</a></p>
+    </div>
+  </section>
+</div>

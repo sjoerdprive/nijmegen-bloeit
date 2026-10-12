@@ -1,0 +1,61 @@
+---
+layout: layouts/base.njk
+title: Wegwijzer voor de buurt
+permalink: /wegwijzer/
+seoTitel: "Subsidies en melden in de binnenstad – Bloemerstraat Nijmegen"
+description: "Wegwijzer voor de binnenstad van Nijmegen: gevelsubsidie, subsidie voor geveltuinen en groendaken, graffiti en zwerfafval melden, en samen iets organiseren."
+---
+{% from "components/macros.njk" import bronKaart, infoBlok, nieuwsbriefCta %}
+<div class="wrap">
+  <header class="page-intro">
+    <h1>Wegwijzer voor de buurt</h1>
+    <p class="lead">Praktische informatie van Nijmegen Bloeit voor bewoners, ondernemers en pandeigenaren in de binnenstad van Nijmegen: subsidies voor gevels en groen, graffiti en andere zaken melden, en samen iets organiseren.</p>
+  </header>
+
+  <aside class="let-op" aria-label="Over deze informatie">
+    <p><strong>Over deze informatie.</strong> We verwijzen naar officiële bronnen, vooral van de gemeente Nijmegen. Bij elke bron staat wanneer we hem voor het laatst hebben gecontroleerd. Regelingen, bedragen en voorwaarden kunnen veranderen en een subsidie is nooit gegarandeerd. Kijk daarom altijd bij de bron zelf voordat je iets aanvraagt of kosten maakt. Nijmegen Bloeit is geen onderdeel van de gemeente.</p>
+  </aside>
+
+  <nav class="inhoudsopgave" aria-labelledby="inhoud-titel">
+    <h2 id="inhoud-titel" class="h3">Op deze pagina</h2>
+    <ul>
+      {%- for groep in wegwijzer.groepen %}
+      <li><a href="#{{ groep.id }}">{{ groep.titel }}</a></li>
+      {%- endfor %}
+    </ul>
+  </nav>
+
+  {%- for groep in wegwijzer.groepen %}
+  <section class="sectie" id="{{ groep.id }}" aria-labelledby="{{ groep.id }}-titel">
+    <h2 id="{{ groep.id }}-titel">{{ groep.titel }}</h2>
+    <p class="sectie__intro">{{ groep.intro }}</p>
+
+    {%- if groep.bronnen %}
+    <div class="kaarten kaarten--breed">
+      {%- for bron in groep.bronnen %}
+      {{ bronKaart(bron) }}
+      {%- endfor %}
+    </div>
+    {%- endif %}
+
+    {%- if groep.tips %}
+    <h3>{{ groep.tips_titel }}</h3>
+    <div class="infoblokken">
+      {%- for tip in groep.tips %}
+      {{ infoBlok(tip.titel, tip.tekst, 4) }}
+      {%- endfor %}
+    </div>
+    {%- endif %}
+
+    {%- if groep.stappen %}
+    <ol class="stappen">
+      {%- for stap in groep.stappen %}
+      <li>{{ infoBlok(stap.titel, stap.tekst) }}</li>
+      {%- endfor %}
+    </ol>
+    {%- endif %}
+  </section>
+  {%- endfor %}
+
+  {{ nieuwsbriefCta(site, tekst="Volg Nijmegen Bloeit via de nieuwsbrief. Daarin delen we nieuwe regelingen, tips en, zodra het zover is, mogelijkheden om samen iets aan te pakken in de buurt.") }}
+</div>

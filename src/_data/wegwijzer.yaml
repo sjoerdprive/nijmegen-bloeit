@@ -1,0 +1,187 @@
+# Wegwijzer voor de buurt.
+#
+# Elke bron heeft:
+#   titel, url, bron (wie de informatie publiceert), gecontroleerd (datum JJJJ-MM-DD),
+#   voor_wie, voorwaarden (lijst), vergoeding, en eventueel opmerking.
+#
+# Neem bedragen en percentages ALLEEN over als ze letterlijk bij de officiële bron
+# staan, en pas "gecontroleerd" aan als je de bron opnieuw hebt bekeken.
+
+groepen:
+  - id: subsidies
+    titel: Subsidies en regelingen
+    intro: >-
+      Regelingen van de gemeente Nijmegen die kunnen helpen bij het verbeteren van gevels,
+      groen en buurtactiviteiten. Een subsidie is nooit gegarandeerd: de gemeente beoordeelt
+      elke aanvraag en regels en budgetten kunnen veranderen. Controleer altijd de actuele
+      voorwaarden bij de gemeente voordat je kosten maakt.
+    bronnen:
+      - titel: Subsidie voor schoonmaken gevels binnenstad (wederopbouwgebied)
+        url: https://www.nijmegen.nl/diensten/monumenten/subsidie-schoonmaken-gevels/
+        bron: Gemeente Nijmegen
+        gecontroleerd: 2026-10-12
+        voor_wie: >-
+          Eigenaren van gebouwen in het wederopbouwgebied van de binnenstad die na de Tweede
+          Wereldoorlog zijn gebouwd. De Bloemerstraat is een van de genoemde hoofdstraten.
+        voorwaarden:
+          - Alleen werk dat de gevel aan de straatkant verbetert, zoals schoonmaken (zonder schade door hoge druk), onderhoud, schilderen en het verwijderen van onderdelen die niet bij het gebouw passen, zoals reclames en kunststof betimmeringen.
+          - Het werk mag pas beginnen na het besluit van de gemeente. Start binnen 6 maanden na het besluit en rond af binnen 1 jaar na de start.
+          - Werk je samen met andere eigenaren, dan vraagt ieder zelf subsidie aan, met een verklaring en één gezamenlijke offerte voor alle gebouwen.
+          - Een omgevingsvergunning kan nodig zijn.
+        vergoeding: >-
+          Volgens de gemeente: bij 1 gebouw 40% van de kosten (maximaal € 4.000), bij 2 gebouwen
+          45% per gebouw (maximaal € 4.500 per gebouw), bij 3 of meer gebouwen 50% per gebouw
+          (maximaal € 5.000 per gebouw). De rest betaalt de eigenaar zelf.
+        opmerking: Regeling "Subsidieregeling Opfrissen panden Nationaal wederopbouwgebied 2025".
+
+      - titel: Subsidie groendaken en plantenmuren
+        url: https://www.nijmegen.nl/diensten/subsidies/subsidie-groendaken-en-plantenmuren/
+        bron: Gemeente Nijmegen
+        gecontroleerd: 2026-10-12
+        voor_wie: >-
+          Eigenaren of huurders van een woning of gebouw (huurders met toestemming van de
+          eigenaar). Buren kunnen samen aanvragen.
+        voorwaarden:
+          - Voor groendaken, groengevels (plantenmuren), verticale tuinen en geveltuinen.
+          - Er gelden minimale oppervlaktes; een groengevel of verticale tuin moet zichtbaar zijn vanaf de openbare ruimte.
+          - Vraag subsidie aan voordat je begint met de aanleg.
+          - Het groen moet minstens 5 jaar in goede staat blijven.
+        vergoeding: >-
+          Volgens de gemeente in de regel 50% van de kosten tot een maximum per m² of per
+          geveltuin. Voor een geveltuin maximaal € 100; bij minimaal 5 aangrenzende geveltuinen
+          75% met een maximum van € 150 per geveltuin.
+        opmerking: Regeling "Subsidieregeling Groendaken en gevels Nijmegen 2026".
+
+      - titel: Subsidie wijkactiviteiten
+        url: https://www.nijmegen.nl/diensten/subsidies/subsidie-wijkactiviteiten/
+        bron: Gemeente Nijmegen
+        gecontroleerd: 2026-10-12
+        voor_wie: Bewonersgroepen en bewonersorganisaties.
+        voorwaarden:
+          - Voor activiteiten die bewoners en organisaties in de straat of wijk met elkaar verbinden, zoals een straatfeest.
+          - Aanvragen minstens 6 weken voor het begin van de activiteit.
+          - Je organiseert de activiteit zelf en betaalt een redelijke eigen bijdrage.
+          - Organisaties, verenigingen en stichtingen vragen aan met eHerkenning.
+        vergoeding: >-
+          De pagina van de gemeente noemt geen bedrag. Zie de regeling via de gemeente.
+
+      - titel: Subsidie vrijwilligersorganisaties
+        url: https://www.nijmegen.nl/diensten/subsidies/subsidie-vrijwilligersorganisaties/
+        bron: Gemeente Nijmegen
+        gecontroleerd: 2026-10-12
+        voor_wie: >-
+          Nijmeegse vrijwilligersorganisaties zonder winstoogmerk die een rechtspersoon zijn
+          (of in oprichting) en vooral met vrijwilligers werken.
+        voorwaarden:
+          - Voor kosten rond vrijwilligers, zoals werving, korte trainingen en waardering.
+          - Aanvragen minstens 13 weken voor de start van de activiteiten.
+          - Op is op: aanvragen worden niet meer behandeld als het fonds leeg is.
+        vergoeding: Volgens de gemeente maximaal € 600 per jaar.
+        opmerking: >-
+          Een los buurtinitiatief zonder rechtspersoon komt hiervoor (nog) niet in aanmerking.
+
+  - id: melden
+    titel: Melden en verbeteren
+    intro: >-
+      Zie je graffiti, zwerfafval of iets dat kapot is? Een melding bij de gemeente is vaak
+      de snelste weg naar een oplossing. Elke melding in de buurt draagt bij aan de aanpak van
+      Nijmegen Bloeit, te beginnen met graffiti.
+    bronnen:
+      - titel: Graffiti melden
+        url: https://www.nijmegen.nl/diensten/melden-aan-de-gemeente/graffiti-melden/
+        bron: Gemeente Nijmegen
+        gecontroleerd: 2026-10-12
+        voor_wie: >-
+          Eigenaren en gebruikers van woningen, bedrijfspanden en andere gebouwen. Huurders
+          melden graffiti eerst bij hun verhuurder.
+        voorwaarden:
+          - Melden kan online of met de Meld & Herstel-app.
+          - De gemeente verwijdert graffiti alleen met toestemming van de eigenaar. Eén keer toestemming geven is genoeg voor latere meldingen.
+          - Volgens de gemeente wordt graffiti binnen 5 werkdagen verwijderd, aanstootgevende of discriminerende teksten binnen 24 uur.
+          - Op moeilijk bereikbare plekken of bij kans op gevelschade kan verwijderen niet, of kost het extra.
+        vergoeding: >-
+          Volgens de gemeente gratis voor eigenaren van een eigen huis. Voor ondernemers en
+          organisaties: tot 1 m² gratis, 2 tot 20 m² € 185, groter dan 20 m² in overleg.
+          Voor een VvE bekijkt de gemeente per geval of de kosten (deels) worden vergoed.
+
+      - titel: Meld & Herstel (openbare ruimte)
+        url: https://www.nijmegen.nl/diensten/melden-aan-de-gemeente/meld-herstel/
+        bron: Gemeente Nijmegen
+        gecontroleerd: 2026-10-12
+        voor_wie: Iedereen die een probleem in de openbare ruimte ziet.
+        voorwaarden:
+          - Voor zwerfafval en volle containers, straatverlichting, groen, bestrating, straatmeubilair (ook graffiti), overlast en meer.
+          - Melden via de website of de Meld & Herstel-app.
+          - Volgens de gemeente hoor je binnen 5 werkdagen hoe je melding wordt afgehandeld.
+          - Dringend? Bel 14 024.
+        vergoeding: Melden is gratis.
+
+      - titel: Overzicht melden aan de gemeente
+        url: https://www.nijmegen.nl/diensten/melden-aan-de-gemeente/
+        bron: Gemeente Nijmegen
+        gecontroleerd: 2026-10-12
+        voor_wie: Iedereen.
+        voorwaarden:
+          - Overzicht van alles wat je bij de gemeente kunt melden, van overlast tot gevonden voorwerpen.
+          - Telefonisch via 14 024 (maandag tot en met vrijdag, 9.00 tot 17.00 uur).
+
+    tips_titel: Praktisch over gevelonderhoud en vergroening
+    tips:
+      - titel: Gevel schoonmaken
+        tekst: >-
+          Laat een gevel reinigen op een manier die het materiaal niet beschadigt. De gemeente
+          noemt bij de gevelsubsidie uitdrukkelijk schoonmaken "zonder schade door hoge druk".
+          Vraag een vakbedrijf om advies over de juiste methode voor jouw gevel.
+      - titel: Eerst toestemming, dan beginnen
+        tekst: >-
+          Wil je subsidie, begin dan pas na het besluit van de gemeente. Controleer ook of je
+          een omgevingsvergunning nodig hebt, bijvoorbeeld bij het veranderen van de gevel.
+      - titel: Groen aan de gevel
+        tekst: >-
+          Een geveltuin of plantenmuur is vaak goed te combineren met een bestaande gevel. Laat
+          bij een groendak of plantenmuur vooraf beoordelen of het dak of de muur het gewicht
+          kan dragen; de gemeente raadt dit aan.
+      - titel: Wat mag je zelf, en wat niet?
+        tekst: >-
+          Aan je eigen pand beslis je als eigenaar zelf, binnen de regels. Plantenbakken, bomen
+          of ander groen op de stoep of in de straat zijn openbare ruimte: daarvoor is altijd
+          overleg met de gemeente nodig.
+
+  - id: samen-organiseren
+    titel: Samen iets organiseren
+    intro: >-
+      Heb je een idee voor je straat, zoals een geveltuin, een opruimactie of een straatfeest?
+      Nijmegen Bloeit wil plannen van bewoners, ondernemers en eigenaren gaan bundelen, zodat we
+      samen sterker staan. Tot het zover is, helpen deze stappen je op weg.
+    stappen:
+      - titel: Volg het initiatief
+        tekst: >-
+          Schrijf je in voor de nieuwsbrief van Nijmegen Bloeit. Zo blijf je op de hoogte en lees
+          je wanneer er kanalen opengaan om ideeën in te brengen en actiever mee te doen.
+      - titel: Begin klein en concreet
+        tekst: >-
+          Kies één duidelijk doel. Kijk welke buren of ondernemers ook willen meedoen. Zodra
+          Nijmegen Bloeit daar kanalen voor heeft, kun je je plan bij het initiatief onderbrengen,
+          zodat anderen kunnen aanhaken.
+      - titel: Stem af met de eigenaar of de gemeente
+        tekst: >-
+          Gaat het om een gebouw, dan beslist de eigenaar. Gaat het om de stoep, de straat of
+          ander openbaar gebied, dan is overleg met de gemeente nodig. Voor sommige
+          veranderingen aan een gebouw is een omgevingsvergunning nodig; dat kun je nagaan via
+          het [Omgevingsloket](https://omgevingswet.overheid.nl/).
+      - titel: Maak gebruik van gemeentelijke ondersteuning
+        tekst: >-
+          De gemeente is bereikbaar via 14 024 en het
+          [contactformulier](https://formulier.nijmegen.nl/contactformulier/startpagina/).
+          Bekijk ook de subsidies hierboven.
+      - titel: Samen levert meer op
+        tekst: >-
+          Bij gevels loont samenwerken: de gemeente geeft voor de gevelsubsidie een hoger
+          percentage als meerdere gebouwen samen worden aangepakt. Ook geveltuinen krijgen een
+          hogere bijdrage als minimaal vijf aangrenzende geveltuinen samen worden aangelegd.
+          Nijmegen Bloeit wil geïnteresseerden hiervoor bij elkaar brengen.
+      - titel: Contacten met andere organisaties
+        tekst: >-
+          Er zijn in Nijmegen al organisaties en initiatieven die zich met de binnenstad, groen
+          en schone straten bezighouden. Nijmegen Bloeit zoekt de samenwerking met
+          hen op en deelt via de nieuwsbrief relevante contacten zodra die zijn gecontroleerd.

@@ -1,0 +1,26 @@
+{
+  "name": "nijmegen-bloeit",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Website van het buurtinitiatief Nijmegen Bloeit (Nijmegen, nijmegenbloeit.online)",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "dev": "eleventy --serve",
+    "build": "eleventy",
+    "clean": "rm -rf _site",
+    "test": "npm run build && npm run test:a11y && npm run test:links",
+    "test:a11y": "node scripts/a11y.mjs",
+    "test:links": "linkinator _site --recurse --skip \"^https?://localhost\" --retry",
+    "test:links:intern": "linkinator _site --recurse --skip \"^https?://(?!localhost)\""
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.6",
+    "js-yaml": "^4.3.2",
+    "linkinator": "^8.1.0",
+    "markdown-it": "^15.0.2",
+    "pa11y": "^10.0.0"
+  }
+}
