@@ -1,9 +1,16 @@
-{#- Paginatitel voor zoekmachines: "seoTitel" uit de front matter, anders "titel | naam". -#}
+{#-
+  Basislayout voor alle pagina's, in het Nederlands (nl) en Engels (en).
+  - "lang" komt uit src/_data/lang.js (nl) of src/en/en.json (en).
+  - "vertaling" in de front matter wijst naar dezelfde pagina in de andere taal.
+  - Paginatitel voor zoekmachines: "seoTitel", anders "titel | naam".
+-#}
+{%- set t = i18n[lang] -%}
+{%- set andereTaal = t.taalwissel.lang -%}
 {%- set paginaTitel = seoTitel or ((title + " | " + site.naam) if title else site.naam) -%}
-{%- set paginaOmschrijving = description or site.omschrijving -%}
+{%- set paginaOmschrijving = description or t.omschrijving -%}
 {%- set canoniek = page.url | absoluteUrl(site.url) -%}
 <!doctype html>
-<html lang="nl">
+<html lang="{{ lang }}">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -13,32 +20,43 @@
   <meta name="robots" content="noindex">
   {%- endif %}
   <link rel="canonical" href="{{ canoniek }}">
+  {%- if vertaling %}
+  <link rel="alternate" hreflang="{{ lang }}" href="{{ canoniek }}">
+  <link rel="alternate" hreflang="{{ andereTaal }}" href="{{ vertaling | absoluteUrl(site.url) }}">
+  <link rel="alternate" hreflang="x-default" href="{{ (page.url if lang == 'nl' else vertaling) | absoluteUrl(site.url) }}">
+  {%- endif %}
   <meta property="og:type" content="website">
-  <meta property="og:locale" content="nl_NL">
+  <meta property="og:locale" content="{{ t.locale }}">
+  <meta property="og:locale:alternate" content="{{ i18n[andereTaal].locale }}">
   <meta property="og:site_name" content="{{ site.naam }}">
   <meta property="og:title" content="{{ title or site.naam }}">
   <meta property="og:description" content="{{ paginaOmschrijving }}">
   <meta property="og:url" content="{{ canoniek }}">
-  <meta name="theme-color" content="#2b5e34">
+  <meta name="theme-color" content="#0b0b0b">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="/fonts/space-grotesk.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/inter.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/css/style.css">
-  {%- if page.url == "/" %}
-  <script type="application/ld+json">{{ structuredData | dump | safe }}</script>
+  {%- if page.url == t.home %}
+  <script type="application/ld+json">{{ structuredData[lang] | dump | safe }}</script>
   {%- endif %}
 </head>
 <body>
-  <a class="skiplink" href="#inhoud">Direct naar de inhoud</a>
+  <a class="skiplink" href="#inhoud">{{ t.skiplink }}</a>
 
   <header class="site-header">
     <div class="wrap site-header__inner">
-      <a class="logo" href="/"{% if page.url == "/" %} aria-current="page"{% endif %}>
-        <svg class="logo__mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path d="M16 29V15" /><path d="M16 15c0-5 3-8 8-9-1 5-3 8-8 9Z" /><path d="M16 21c0-4-3-6-7-7 1 4 3 6 7 7Z" /></svg>
-        <span>{{ site.naam }}</span>
-      </a>
-      <nav class="site-nav" aria-label="Hoofdmenu">
+      <div class="site-header__top">
+        <a class="logo" href="{{ t.home }}"{% if page.url == t.home %} aria-current="page"{% endif %}>
+          <svg class="logo__mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path d="M16 29V15" /><path d="M16 15c0-5 3-8 8-9-1 5-3 8-8 9Z" /><path d="M16 21c0-4-3-6-7-7 1 4 3 6 7 7Z" /></svg>
+          <span>{{ site.naam }}</span>
+        </a>
+        <a class="taalwissel" href="{{ vertaling or i18n[andereTaal].home }}" lang="{{ andereTaal }}" hreflang="{{ andereTaal }}">{{ t.taalwissel.tekst }}</a>
+      </div>
+      <nav class="site-nav" aria-label="{{ t.menuLabel }}">
         <ul>
-          {%- for item in site.navigatie %}
-          <li><a href="{{ item.url }}"{% if page.url == item.url or (item.url != "/" and page.url.startsWith(item.url)) %} aria-current="page"{% endif %}>{{ item.titel }}</a></li>
+          {%- for item in t.navigatie %}
+          <li><a href="{{ item.url }}"{% if page.url.startsWith(item.url) %} aria-current="page"{% endif %}>{{ item.titel }}</a></li>
           {%- endfor %}
         </ul>
       </nav>
@@ -53,22 +71,18 @@
     <div class="wrap site-footer__inner">
       <div>
         <p class="site-footer__naam">{{ site.naam }}</p>
-        <p>{{ site.slogan }}</p>
-        <p>Contact: <a href="mailto:{{ site.contact.email }}">{{ site.contact.email }}</a></p>
-        <p class="site-footer__disclaimer">Een onafhankelijk buurtinitiatief. Dit is geen website van de gemeente Nijmegen.</p>
+        <p>{{ t.slogan }}</p>
+        <p>{{ t.voet.contact }}: <a href="mailto:{{ site.contact.email }}">{{ site.contact.email }}</a></p>
+        <p class="site-footer__disclaimer">{{ t.voet.disclaimer }}</p>
       </div>
-      <nav aria-label="Voettekst">
+      <nav aria-label="{{ t.voetLabel }}">
         <ul>
-          <li><a href="/projecten/">Plannen en projecten</a></li>
-          <li><a href="/wegwijzer/">Wegwijzer voor de buurt</a></li>
-          <li><a href="/over/">Over het initiatief</a></li>
-          <li><a href="/nieuwsbrief/">Nieuwsbrief en veelgestelde vragen</a></li>
-          <li><a href="/privacy/">Privacyverklaring</a></li>
-          <li><a href="/toegankelijkheid/">Toegankelijkheid</a></li>
-          <li><a href="/sitemap/">Sitemap</a></li>
+          {%- for item in t.voet.links %}
+          <li><a href="{{ item.url }}">{{ item.titel }}</a></li>
+          {%- endfor %}
         </ul>
       </nav>
-      <p class="site-footer__cookies">Deze website plaatst geen cookies en gebruikt geen tracking.</p>
+      <p class="site-footer__cookies">{{ t.voet.cookies }}</p>
     </div>
   </footer>
 </body>

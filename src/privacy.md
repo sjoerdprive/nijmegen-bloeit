@@ -7,6 +7,7 @@ description: "Hoe Nijmegen bloeit omgaat met persoonsgegevens, de nieuwsbrief vi
 # deze verklaring heeft gecontroleerd en alle [IN TE VULLEN]-velden zijn ingevuld.
 noindex: true
 sitemap: false
+vertaling: /en/privacy/
 ---
 
 <div class="let-op" role="note">

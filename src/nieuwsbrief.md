@@ -6,7 +6,7 @@ seoTitel: "Meedoen en nieuwsbrief | Nijmegen bloeit"
 description: "Doe mee met Nijmegen bloeit in Nijmegen: schrijf je in voor de nieuwsbrief en lees antwoorden op vragen over meehelpen, lidmaatschap en donaties."
 # Veelgestelde vragen. Voeg een vraag toe door een blok te kopiëren.
 # "antwoord" mag Markdown bevatten. Met "id" kun je ernaar linken (/nieuwsbrief/#id).
-# "toonContact: true" voegt de contacttekst uit site.js toe aan het antwoord.
+# "toonContact: true" voegt de contacttekst uit _data/i18n.js toe aan het antwoord.
 faq:
   - vraag: Wat is het doel van Nijmegen bloeit?
     antwoord: >-
@@ -49,8 +49,9 @@ faq:
     antwoord: >-
       Nee. Nijmegen bloeit is een onafhankelijk buurtinitiatief. We verwijzen wel naar informatie
       van de gemeente Nijmegen, met een link naar de bron.
+vertaling: /en/newsletter/
 ---
-{% from "components/macros.njk" import nieuwsbriefCta, faqLijst %}
+{% from "components/macros.njk" import nieuwsbriefCta, faqLijst with context %}
 
 ## Laat de Bloemerstraat bloeien
 
@@ -61,7 +62,7 @@ termijn ook gevels, groen en het straatbeeld kunnen verbeteren.
 Schrijf je in voor de nieuwsbrief en blijf op de hoogte van plannen, projecten en
 mogelijkheden om mee te doen.
 
-{{ nieuwsbriefCta(site, titel="Inschrijven", tekst="Met de nieuwsbrief blijf je op de hoogte van Nijmegen bloeit. Wil je reageren of meehelpen? Mail dan naar info@nijmegenbloeit.online.") }}
+{{ nieuwsbriefCta("Inschrijven", "Met de nieuwsbrief blijf je op de hoogte van Nijmegen bloeit. Wil je reageren of meehelpen? Mail dan naar info@nijmegenbloeit.online.") }}
 
 <div class="qr">
   <img src="{{ site.nieuwsbrief.qrCode }}" alt="QR-code naar de inschrijfpagina van de nieuwsbrief" width="160" height="160" loading="lazy">
@@ -89,4 +90,4 @@ contributie is er nog niet.
 
 ## Veelgestelde vragen
 
-{{ faqLijst(faq, site) }}
+{{ faqLijst(faq) }}

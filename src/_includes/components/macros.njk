@@ -1,6 +1,7 @@
 {#
-  Herbruikbare bouwstenen. Gebruik in een pagina met:
-  {% from "components/macros.njk" import statusBadge, nieuwsbriefCta, bronKaart, infoBlok, projectKaart %}
+  Herbruikbare bouwstenen. Importeer ze altijd "with context", zodat ze de taal van de pagina kennen:
+  {% from "components/macros.njk" import statusBadge, nieuwsbriefCta, bronKaart, infoBlok, projectRij with context %}
+  Vaste teksten komen uit src/_data/i18n.js (nl en en).
 #}
 
 {# Klein vormpje bij een status: vol, half, kwart of leeg. Puur decoratief. #}
@@ -13,45 +14,48 @@
 {%- endmacro %}
 
 {# Statuslabel van een project. Kleur is aanvullend; het label staat altijd in tekst. #}
-{% macro statusBadge(sleutel, statussen) -%}
+{% macro statusBadge(sleutel) -%}
 {%- set s = statussen[sleutel] -%}
-<span class="status status--{{ sleutel }}">{{ statusIcoon(s.symbool) }}<span class="visually-hidden">Status: </span>{{ s.label }}</span>
+<span class="status status--{{ sleutel }}">{{ statusIcoon(s.symbool) }}<span class="visually-hidden">{{ i18n[lang].status }}</span>{{ s[lang].label }}</span>
 {%- endmacro %}
 
 {# De primaire actie van de site. Gebruik hem één keer per pagina. #}
-{% macro nieuwsbriefCta(site, titel="Blijf op de hoogte", tekst="Schrijf je in voor de nieuwsbrief en blijf op de hoogte van plannen, projecten en mogelijkheden om mee te doen.", kopNiveau=2) -%}
+{% macro nieuwsbriefCta(titel="", tekst="", kopNiveau=2) -%}
+{%- set t = i18n[lang].cta -%}
 <section class="cta" aria-labelledby="cta-titel">
-  <h{{ kopNiveau }} id="cta-titel" class="cta__titel">{{ titel }}</h{{ kopNiveau }}>
-  <p>{{ tekst }}</p>
-  <p><a class="button" href="{{ site.nieuwsbrief.url }}">{{ site.nieuwsbrief.knoptekst }}<span class="visually-hidden"> bij Zendlijst</span></a></p>
-  <p class="cta__noot">Je schrijft je in op de website van Zendlijst, de externe dienst waarmee we de nieuwsbrief versturen. Je geeft daar alleen je e-mailadres op. Lees meer in onze <a href="/privacy/">privacyverklaring</a>.</p>
+  <h{{ kopNiveau }} id="cta-titel" class="cta__titel">{{ titel or t.titel }}</h{{ kopNiveau }}>
+  <p>{{ tekst or t.tekst }}</p>
+  <p><a class="button" href="{{ site.nieuwsbrief.url }}">{{ t.knop }}<span class="visually-hidden">{{ t.knopExtra }}</span></a></p>
+  <p class="cta__noot">{{ t.noot | safe }}</p>
 </section>
 {%- endmacro %}
 
-{# Kaart voor een externe regeling of bron in de wegwijzer. #}
+{# Kaart voor een externe regeling of bron in de wegwijzer. Teksten staan per taal onder bron.nl / bron.en. #}
 {% macro bronKaart(bron, kopNiveau=3) -%}
+{%- set b = bron[lang] -%}
+{%- set t = i18n[lang].bron -%}
 <article class="kaart bron">
-  <h{{ kopNiveau }} class="kaart__titel">{{ bron.titel }}</h{{ kopNiveau }}>
+  <h{{ kopNiveau }} class="kaart__titel">{{ b.titel }}</h{{ kopNiveau }}>
   <dl class="bron__gegevens">
-    {%- if bron.voor_wie %}
-    <dt>Voor wie</dt>
-    <dd>{{ bron.voor_wie }}</dd>
+    {%- if b.voor_wie %}
+    <dt>{{ t.voorWie }}</dt>
+    <dd>{{ b.voor_wie }}</dd>
     {%- endif %}
-    {%- if bron.voorwaarden %}
-    <dt>Belangrijkste punten</dt>
-    <dd><ul>{% for v in bron.voorwaarden %}<li>{{ v | mdInline | safe }}</li>{% endfor %}</ul></dd>
+    {%- if b.voorwaarden %}
+    <dt>{{ t.punten }}</dt>
+    <dd><ul>{% for v in b.voorwaarden %}<li>{{ v | mdInline | safe }}</li>{% endfor %}</ul></dd>
     {%- endif %}
-    {%- if bron.vergoeding %}
-    <dt>Kosten en vergoeding</dt>
-    <dd>{{ bron.vergoeding }}</dd>
+    {%- if b.vergoeding %}
+    <dt>{{ t.kosten }}</dt>
+    <dd>{{ b.vergoeding }}</dd>
     {%- endif %}
-    {%- if bron.opmerking %}
-    <dt>Let op</dt>
-    <dd>{{ bron.opmerking }}</dd>
+    {%- if b.opmerking %}
+    <dt>{{ t.letOp }}</dt>
+    <dd>{{ b.opmerking }}</dd>
     {%- endif %}
   </dl>
-  <p class="bron__link"><a href="{{ bron.url }}">Bekijk “{{ bron.titel }}” bij {{ bron.bron }}</a></p>
-  <p class="bron__datum">Bron: {{ bron.bron }}. Gecontroleerd op <time datetime="{{ bron.gecontroleerd | datumISO }}">{{ bron.gecontroleerd | datumNL }}</time>.</p>
+  <p class="bron__link"><a href="{{ bron.url }}"{% if lang != "nl" %} hreflang="nl"{% endif %}>{{ t.bekijk(b.titel, b.bron) }}{{ t.taalNoot }}</a></p>
+  <p class="bron__datum">{{ t.bron }}: {{ b.bron }}. {{ t.gecontroleerd }} <time datetime="{{ bron.gecontroleerd | datumISO }}">{{ bron.gecontroleerd | datum(lang) }}</time>.</p>
 </article>
 {%- endmacro %}
 
@@ -71,13 +75,14 @@
       beschrijving: Wat voor foto hier zou passen (alleen voor de placeholder)
   Zonder src toont de site een placeholder, zolang site.fotoPlaceholders aan staat.
 #}
-{% macro afbeelding(foto, site, variant="breed") -%}
+{% macro afbeelding(foto, variant="breed") -%}
+{%- set t = i18n[lang].foto -%}
 {%- if foto and foto.src %}
 <figure class="foto foto--{{ variant }}">
   <img src="{{ foto.src }}" alt="{{ foto.alt }}"{% if foto.breedte %} width="{{ foto.breedte }}" height="{{ foto.hoogte }}"{% endif %} {% if variant == "hero" %}fetchpriority="high"{% else %}loading="lazy"{% endif %} decoding="async">
   <figcaption>
     {%- if foto.onderschrift %}{{ foto.onderschrift }}. {% endif -%}
-    <span class="foto__bron">Foto: {% if foto.bronUrl %}<a href="{{ foto.bronUrl }}">{{ foto.maker }}</a>{% else %}{{ foto.maker }}{% endif %}
+    <span class="foto__bron">{{ t.label }}: {% if foto.bronUrl %}<a href="{{ foto.bronUrl }}">{{ foto.maker }}</a>{% else %}{{ foto.maker }}{% endif %}
     {%- if foto.licentie %}, {% if foto.licentieUrl %}<a href="{{ foto.licentieUrl }}">{{ foto.licentie }}</a>{% else %}{{ foto.licentie }}{% endif %}{% endif %}
     {%- if foto.bewerking %} ({{ foto.bewerking }}){% endif %}.</span>
   </figcaption>
@@ -86,7 +91,7 @@
 <figure class="foto foto--{{ variant }} foto--placeholder" aria-hidden="true">
   <div class="foto__vlak">
     <svg viewBox="0 0 24 24" focusable="false"><path d="M4 7h3l2-2h6l2 2h3v12H4z"/><circle cx="12" cy="13" r="3.5"/></svg>
-    <span>Foto volgt: {{ foto.beschrijving }}</span>
+    <span>{{ t.volgt }}: {{ foto.beschrijving }}</span>
   </div>
 </figure>
 {%- endif %}
@@ -100,22 +105,26 @@
 </div>
 {%- endmacro %}
 
-{# Projectkaart voor overzichten. #}
-{% macro projectKaart(project, statussen, kopNiveau=3) -%}
-<article class="kaart project-kaart">
-  <p class="project-kaart__status">{{ statusBadge(project.data.status, statussen) }}</p>
-  <h{{ kopNiveau }} class="kaart__titel"><a href="{{ project.url }}">{{ project.data.title }}</a></h{{ kopNiveau }}>
-  <p>{{ project.data.samenvatting }}</p>
-</article>
+{# Genummerde projectrij voor overzichten. Het nummer volgt het veld "volgorde". #}
+{% macro projectRij(project, kopNiveau=3) -%}
+<li class="projectrij">
+  <span class="projectrij__nr" aria-hidden="true">{{ project.data.volgorde | nummer }}</span>
+  <div class="projectrij__tekst">
+    <p>{{ statusBadge(project.data.status) }}</p>
+    <h{{ kopNiveau }}><a href="{{ project.url }}">{{ project.data.title }}</a></h{{ kopNiveau }}>
+    <p>{{ project.data.samenvatting }}</p>
+  </div>
+  {%- if project.data.foto and project.data.foto.src %}
+  <img class="projectrij__foto" src="{{ project.data.foto.src }}" alt="" width="{{ project.data.foto.breedte }}" height="{{ project.data.foto.hoogte }}" loading="lazy" decoding="async">
+  {%- else %}
+  <div class="projectrij__foto projectrij__foto--vlak" aria-hidden="true"></div>
+  {%- endif %}
+</li>
 {%- endmacro %}
 
-{# Hoe mensen contact opnemen. Toont het e-mailadres uit site.js zodra dat is ingevuld. #}
-{% macro contactTekst(site) -%}
-{%- if site.contact.email -%}
-Graag! Stuur je idee of voorstel naar <a href="mailto:{{ site.contact.email }}">{{ site.contact.email }}</a>.
-{%- else -%}
-Er is nog geen contactadres. Schrijf je in voor de nieuwsbrief om op de hoogte te blijven.
-{%- endif -%}
+{# Hoe mensen contact opnemen. #}
+{% macro contactTekst() -%}
+{{ i18n[lang].contactTekst | safe }}
 {%- endmacro %}
 
 {#
@@ -123,14 +132,14 @@ Er is nog geen contactadres. Schrijf je in voor de nieuwsbrief om op de hoogte t
   Dankzij name="faq" staat in moderne browsers steeds één antwoord open;
   oudere browsers laten de vragen los open- en dichtklappen.
 #}
-{% macro faqLijst(vragen, site) -%}
+{% macro faqLijst(vragen) -%}
 <div class="faq">
   {%- for item in vragen %}
   <details class="faq__item" name="faq"{% if item.id %} id="{{ item.id }}"{% endif %}>
     <summary class="faq__vraag">{{ item.vraag }}</summary>
     <div class="faq__antwoord">
       {%- if item.antwoord %}{{ item.antwoord | md | safe }}{% endif %}
-      {%- if item.toonContact %}<p>{{ contactTekst(site) }}</p>{% endif %}
+      {%- if item.toonContact %}<p>{{ contactTekst() }}</p>{% endif %}
     </div>
   </details>
   {%- endfor %}

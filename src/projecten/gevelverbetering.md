@@ -39,9 +39,12 @@ bronnen:
   - titel: Subsidie voor schoonmaken gevels binnenstad
     url: https://www.nijmegen.nl/diensten/monumenten/subsidie-schoonmaken-gevels/
     bron: Gemeente Nijmegen
+    taal: nl
   - titel: Omgevingsloket
     url: https://omgevingswet.overheid.nl/
     bron: Rijksoverheid
+    taal: nl
+vertaling: /en/projects/facade-improvement/
 ---
 
 Vuil, verouderd schilderwerk en later aangebrachte reclames en betimmeringen hebben veel

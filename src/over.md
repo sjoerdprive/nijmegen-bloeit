@@ -9,8 +9,9 @@ permalink: /over/
 seoTitel: "Over Nijmegen bloeit – buurtinitiatief binnenstad Nijmegen"
 description: "Nijmegen bloeit is een onafhankelijk buurtinitiatief in de binnenstad van Nijmegen. Lees waarom we zijn begonnen, wat we willen bereiken en waar we nu staan."
 intro: "Nijmegen bloeit is een onafhankelijk buurtinitiatief in Nijmegen. We willen bewoners, ondernemers en pandeigenaren samenbrengen om de Bloemerstraat en omgeving aantrekkelijker, schoner en levendiger te maken."
+vertaling: /en/about/
 ---
-{% from "components/macros.njk" import nieuwsbriefCta %}
+{% from "components/macros.njk" import nieuwsbriefCta with context %}
 
 ## Waarom we zijn begonnen
 
@@ -68,4 +69,4 @@ verbeteringen die echt zichtbaar zijn.
 Nijmegen bloeit is een onafhankelijk initiatief. Het is geen onderdeel van de
 gemeente Nijmegen. Waar we informatie van de gemeente gebruiken, verwijzen we naar de bron.
 
-{{ nieuwsbriefCta(site) }}
+{{ nieuwsbriefCta() }}

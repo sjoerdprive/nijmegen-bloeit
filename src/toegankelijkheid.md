@@ -5,6 +5,7 @@ permalink: /toegankelijkheid/
 seoTitel: "Toegankelijkheid | Nijmegen bloeit"
 description: "Nijmegen bloeit wil dat de website bruikbaar is voor zoveel mogelijk mensen. Lees wat we daarvoor doen en hoe je een probleem of suggestie meldt."
 intro: "We doen ons best om deze website zo bruikbaar mogelijk te maken voor zoveel mogelijk mensen, ook als je een beperking hebt of een hulpmiddel gebruikt."
+vertaling: /en/accessibility/
 ---
 
 ## Wat we doen
@@ -19,6 +20,8 @@ We streven naar de richtlijnen voor digitale toegankelijkheid, de
 - foto's hebben een beschrijving voor wie ze niet kan zien;
 - links naar andere websites openen in een nieuw venster; dat staat erbij met een pijltje (↗)
   en een tekst voor schermlezers;
+- de website is ook in het Engels beschikbaar; met de taalknop bovenaan elke pagina wissel je
+  tussen Nederlands en Engels;
 - er zijn geen bewegende beelden, video's die vanzelf starten of pop-ups.
 
 We controleren de website met automatische tests en met de hand. Een automatische test vindt

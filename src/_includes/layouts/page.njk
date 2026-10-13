@@ -1,7 +1,7 @@
 ---
 layout: layouts/base.njk
 ---
-{% from "components/macros.njk" import afbeelding %}
+{% from "components/macros.njk" import afbeelding with context %}
 <div class="wrap">
   <header class="page-intro">
     <h1>{{ title }}</h1>
@@ -9,7 +9,7 @@ layout: layouts/base.njk
     <p class="lead">{{ intro }}</p>
     {%- endif %}
   </header>
-  {{ afbeelding(foto, site) }}
+  {{ afbeelding(foto) }}
   <div class="prose">
     {{ content | safe }}
   </div>

@@ -26,7 +26,7 @@ const base = `http://127.0.0.1:${server.address().port}`;
 // Alle pagina's uit de sitemap, plus de pagina's die er bewust niet in staan.
 const sitemap = await readFile(join(ROOT, "sitemap.xml"), "utf8");
 const paths = [...sitemap.matchAll(/<loc>[^<]*?(\/[^<]*)<\/loc>/g)].map((m) => new URL(m[1], "http://x").pathname);
-paths.push("/privacy/", "/404.html");
+paths.push("/privacy/", "/en/privacy/", "/404.html");
 
 const viewports = [
   { width: 375, height: 800 },

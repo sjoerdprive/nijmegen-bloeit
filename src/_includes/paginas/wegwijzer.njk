@@ -1,0 +1,59 @@
+{#- Gedeelde opbouw van de wegwijzer (nl: /wegwijzer/, en: /en/neighbourhood-guide/).
+    Paginateksten staan in de front matter van die twee pagina's; de inhoud in _data/wegwijzer.yaml. -#}
+{% from "components/macros.njk" import bronKaart, infoBlok, nieuwsbriefCta with context %}
+<div class="wrap">
+  <header class="page-intro">
+    <h1>{{ title }}</h1>
+    <p class="lead">{{ intro }}</p>
+  </header>
+
+  <aside class="let-op" aria-label="{{ letOpLabel }}">
+    <p>{{ letOp | safe }}</p>
+  </aside>
+
+  <nav class="inhoudsopgave" aria-labelledby="inhoud-titel">
+    <h2 id="inhoud-titel" class="h3">{{ opDezePagina }}</h2>
+    <ul>
+      {%- for groep in wegwijzer.groepen %}
+      <li><a href="#{{ groep.id }}">{{ groep[lang].titel }}</a></li>
+      {%- endfor %}
+    </ul>
+  </nav>
+
+  {%- for groep in wegwijzer.groepen %}
+  {%- set g = groep[lang] %}
+  <section class="sectie" id="{{ groep.id }}" aria-labelledby="{{ groep.id }}-titel">
+    <div class="sectiekop">
+      <h2 id="{{ groep.id }}-titel">{{ g.titel }}</h2>
+      <p class="sectie__intro">{{ g.intro }}</p>
+    </div>
+
+    {%- if groep.bronnen %}
+    <div class="kaarten kaarten--breed">
+      {%- for bron in groep.bronnen %}
+      {{ bronKaart(bron) }}
+      {%- endfor %}
+    </div>
+    {%- endif %}
+
+    {%- if groep.tips %}
+    <h3>{{ g.tips_titel }}</h3>
+    <div class="infoblokken">
+      {%- for tip in groep.tips %}
+      {{ infoBlok(tip[lang].titel, tip[lang].tekst, 4) }}
+      {%- endfor %}
+    </div>
+    {%- endif %}
+
+    {%- if groep.stappen %}
+    <ol class="stappen">
+      {%- for stap in groep.stappen %}
+      <li>{{ infoBlok(stap[lang].titel, stap[lang].tekst) }}</li>
+      {%- endfor %}
+    </ol>
+    {%- endif %}
+  </section>
+  {%- endfor %}
+
+  {{ nieuwsbriefCta("", ctaTekst) }}
+</div>

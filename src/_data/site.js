@@ -5,9 +5,7 @@
 // Met de omgevingsvariabele SITE_URL kun je het adres zelf vastzetten.
 export default {
   naam: "Nijmegen bloeit",
-  slogan: "Laat de Bloemerstraat bloeien.",
-  omschrijving:
-    "Nijmegen bloeit is een onafhankelijk buurtinitiatief in Nijmegen voor een aantrekkelijkere, schonere en levendigere Bloemerstraat en omgeving.",
+  // Slogan, omschrijving, menu en andere vaste teksten staan per taal in i18n.js.
   domein: "https://nijmegenbloeit.online",
   get url() {
     if (process.env.SITE_URL) return process.env.SITE_URL;
@@ -19,7 +17,6 @@ export default {
     url: "https://nijmegen-bloeit.zendlijst.nl/",
     privacyUrl: "https://nijmegen-bloeit.zendlijst.nl/privacy",
     qrCode: "/img/qr-nieuwsbrief.png",
-    knoptekst: "Inschrijven voor de nieuwsbrief",
   },
 
   // Contactadres voor vragen, ideeën en aanmelden als helper.
@@ -30,11 +27,4 @@ export default {
   // Toon een placeholder op plekken waar nog een foto moet komen.
   // Zet op false om lege fotoplekken te verbergen.
   fotoPlaceholders: true,
-
-  navigatie: [
-    { titel: "Projecten", url: "/projecten/" },
-    { titel: "Wegwijzer", url: "/wegwijzer/" },
-    { titel: "Over", url: "/over/" },
-    { titel: "Nieuwsbrief", url: "/nieuwsbrief/" },
-  ],
 };

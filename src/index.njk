@@ -1,5 +1,6 @@
 ---
 layout: layouts/base.njk
+vertaling: /en/
 foto:
   src: /img/plein-1944-stevenskerk.webp
   alt: Nieuwe woongebouwen aan Plein 1944 met daartussen de toren van de Stevenskerk, onder een blauwe lucht
@@ -15,18 +16,19 @@ foto:
 seoTitel: "Nijmegen bloeit – buurtinitiatief voor de Bloemerstraat, Nijmegen"
 description: "Buurtinitiatief voor de Bloemerstraat in de binnenstad van Nijmegen. Samen werken aan een schonere, groenere en levendigere straat, te beginnen met graffiti."
 ---
-{% from "components/macros.njk" import statusBadge, nieuwsbriefCta, projectKaart, afbeelding %}
-{%- set graffiti = collections.projecten | metStatus("lopend") | first -%}
+{% from "components/macros.njk" import statusBadge, nieuwsbriefCta, projectRij, afbeelding with context %}
+{%- set t = i18n[lang] -%}
+{%- set lopend = collections.projecten | metStatus("lopend") | first -%}
 <section class="hero" aria-labelledby="hero-titel">
   <div class="wrap hero__inner">
     <div class="hero__tekst">
-    <p class="hero__kicker">Buurtinitiatief in de binnenstad van Nijmegen</p>
-    <h1 id="hero-titel" class="hero__titel">{{ site.slogan }}</h1>
-    <p class="hero__intro">Nijmegen bloeit wil samen met bewoners, ondernemers en pandeigenaren werken aan een aantrekkelijkere, schonere en levendigere Bloemerstraat en omgeving in Nijmegen. We beginnen concreet, met het verwijderen van graffiti.</p>
-    <p><a class="button" href="{{ site.nieuwsbrief.url }}">{{ site.nieuwsbrief.knoptekst }}<span class="visually-hidden"> bij Zendlijst</span></a></p>
-    <p class="hero__noot">Inschrijven gaat via de externe dienst Zendlijst. <a href="/privacy/">Lees hoe we met je gegevens omgaan</a>.</p>
+      <p class="hero__kicker">Buurtinitiatief in de binnenstad van Nijmegen</p>
+      <h1 id="hero-titel" class="hero__titel">{{ t.sloganHtml | safe }}</h1>
+      <p class="hero__intro">Nijmegen bloeit wil samen met bewoners, ondernemers en pandeigenaren werken aan een aantrekkelijkere, schonere en levendigere Bloemerstraat en omgeving in Nijmegen. We beginnen concreet, met het verwijderen van graffiti.</p>
+      <p><a class="button" href="{{ site.nieuwsbrief.url }}">{{ t.cta.knop }}<span class="visually-hidden">{{ t.cta.knopExtra }}</span></a></p>
+      <p class="hero__noot">Inschrijven gaat via de externe dienst Zendlijst. <a href="/privacy/">Lees hoe we met je gegevens omgaan</a>.</p>
     </div>
-    {{ afbeelding(foto, site, "hero") }}
+    {{ afbeelding(foto, "hero") }}
   </div>
 </section>
 
@@ -41,25 +43,25 @@ description: "Buurtinitiatief voor de Bloemerstraat in de binnenstad van Nijmege
   </section>
 
   <section class="sectie uitgelicht" aria-labelledby="nu-titel">
-    <p class="uitgelicht__label">Wat er nu gebeurt</p>
-    <h2 id="nu-titel">{{ graffiti.data.title }}</h2>
-    <p>{{ statusBadge(graffiti.data.status, statussen) }}</p>
-    <p>{{ graffiti.data.samenvatting }}</p>
-    <p><a href="{{ graffiti.url }}">Lees meer over het graffitiproject en hoe je kunt helpen</a></p>
+    <p class="kicker">Wat er nu gebeurt</p>
+    <h2 id="nu-titel">{{ lopend.data.title }}</h2>
+    <p>{{ statusBadge(lopend.data.status) }}</p>
+    <p>{{ lopend.data.samenvatting }}</p>
+    <p><a class="pijllink" href="{{ lopend.url }}">Lees meer over het graffitiproject en hoe je kunt helpen</a></p>
   </section>
 
   <section class="sectie" aria-labelledby="plannen-titel">
     <h2 id="plannen-titel">Plannen voor later</h2>
     <p class="sectie__intro">Dit zijn ambities en ideeën. Ze zijn nog niet gestart en er is niets toegezegd.</p>
-    <div class="kaarten">
+    <ol class="projectlijst">
       {%- for project in collections.projecten %}{% if project.data.status != "lopend" %}
-      {{ projectKaart(project, statussen) }}
+      {{ projectRij(project) }}
       {%- endif %}{% endfor %}
-    </div>
-    <p><a href="/projecten/">Bekijk alle plannen en projecten</a></p>
+    </ol>
+    <p><a class="pijllink" href="/projecten/">Bekijk alle plannen en projecten</a></p>
   </section>
 
-  {{ nieuwsbriefCta(site) }}
+  {{ nieuwsbriefCta() }}
 
   <section class="sectie twee-kolommen" aria-labelledby="helpen-titel">
     <h2 id="helpen-titel">Wil je ook helpen organiseren?</h2>
@@ -74,7 +76,7 @@ description: "Buurtinitiatief voor de Bloemerstraat in de binnenstad van Nijmege
     <div class="prose">
       <p>Ben je bewoner, ondernemer of pandeigenaar? In de wegwijzer van Nijmegen bloeit vind je gemeentelijke regelingen voor gevels en groen, en lees je hoe je graffiti, zwerfafval en kapotte voorzieningen meldt.</p>
       <p>Nijmegen bloeit wil plannen van buren, ondernemers en eigenaren gaan bundelen: samenwerken levert soms ook meer subsidie op. Heb je een plan? Laat het weten via <a href="mailto:{{ site.contact.email }}">{{ site.contact.email }}</a>.</p>
-      <p><a href="/wegwijzer/">Naar de wegwijzer voor de buurt</a></p>
+      <p><a class="pijllink" href="/wegwijzer/">Naar de wegwijzer voor de buurt</a></p>
     </div>
   </section>
 </div>

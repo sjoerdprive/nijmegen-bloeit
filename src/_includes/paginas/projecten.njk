@@ -1,0 +1,37 @@
+{#- Gedeelde opbouw van het projectoverzicht (nl: /projecten/, en: /en/projects/). -#}
+{% from "components/macros.njk" import statusBadge, projectRij, nieuwsbriefCta with context %}
+{%- set lijst = collections[i18n[lang].collectie] -%}
+<div class="wrap">
+  <header class="page-intro">
+    <h1>{{ title }}</h1>
+    <p class="lead">{{ intro }}</p>
+  </header>
+
+  <section class="sectie" aria-labelledby="statussen-titel">
+    <h2 id="statussen-titel" class="h3">{{ legendaTitel }}</h2>
+    <dl class="statuslegenda">
+      {%- for sleutel, s in statussen %}
+      <div>
+        <dt>{{ statusBadge(sleutel) }}</dt>
+        <dd>{{ s[lang].uitleg }}</dd>
+      </div>
+      {%- endfor %}
+    </dl>
+  </section>
+
+  {%- for sleutel, s in statussen %}
+  {%- set groep = lijst | metStatus(sleutel) %}
+  {%- if groep.length %}
+  <section class="sectie" aria-labelledby="groep-{{ sleutel }}">
+    <h2 id="groep-{{ sleutel }}">{{ s[lang].label }}</h2>
+    <ol class="projectlijst">
+      {%- for project in groep %}
+      {{ projectRij(project) }}
+      {%- endfor %}
+    </ol>
+  </section>
+  {%- endif %}
+  {%- endfor %}
+
+  {{ nieuwsbriefCta() }}
+</div>

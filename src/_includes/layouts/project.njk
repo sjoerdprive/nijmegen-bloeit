@@ -1,47 +1,48 @@
 ---
 layout: layouts/base.njk
 ---
-{% from "components/macros.njk" import statusBadge, nieuwsbriefCta, afbeelding %}
-{%- set s = statussen[status] -%}
+{% from "components/macros.njk" import statusBadge, nieuwsbriefCta, afbeelding with context %}
+{%- set t = i18n[lang] -%}
+{%- set s = statussen[status][lang] -%}
 <div class="wrap">
-  <nav class="kruimelpad" aria-label="Kruimelpad">
+  <nav class="kruimelpad" aria-label="{{ t.kruimelLabel }}">
     <ol>
-      <li><a href="/">Home</a></li>
-      <li><a href="/projecten/">Plannen en projecten</a></li>
+      <li><a href="{{ t.home }}">{{ t.kruimel.home }}</a></li>
+      <li><a href="{{ t.kruimel.projectenUrl }}">{{ t.kruimel.projecten }}</a></li>
       <li><a href="{{ page.url }}" aria-current="page">{{ title }}</a></li>
     </ol>
   </nav>
 
   <header class="page-intro">
-    <p class="page-intro__status">{{ statusBadge(status, statussen) }} <span class="status-uitleg">{{ s.uitleg }}</span></p>
+    <p class="page-intro__status">{{ statusBadge(status) }} <span class="status-uitleg">{{ s.uitleg }}</span></p>
     <h1>{{ title }}</h1>
     <p class="lead">{{ samenvatting }}</p>
   </header>
 
-  {{ afbeelding(foto, site) }}
+  {{ afbeelding(foto) }}
 
   <div class="project-body">
     <div class="prose">
       {{ content | safe }}
 
-      <h2>Doel</h2>
+      <h2>{{ t.project.doel }}</h2>
       {{ doel | md | safe }}
 
-      <h2>Wat er al is gebeurd</h2>
+      <h2>{{ t.project.gedaan }}</h2>
       <ul>
         {%- for item in gedaan %}
         <li>{{ item | mdInline | safe }}</li>
         {%- endfor %}
       </ul>
 
-      <h2>Volgende stappen</h2>
+      <h2>{{ t.project.volgende }}</h2>
       <ol>
         {%- for item in volgende_stappen %}
         <li>{{ item | mdInline | safe }}</li>
         {%- endfor %}
       </ol>
 
-      <h2>Zo kun je betrokken raken</h2>
+      <h2>{{ t.project.meedoen }}</h2>
       <ul>
         {%- for item in meedoen %}
         <li>{{ item | mdInline | safe }}</li>
@@ -49,17 +50,17 @@ layout: layouts/base.njk
       </ul>
 
       {%- if bronnen and bronnen.length %}
-      <h2>Links en bronnen</h2>
+      <h2>{{ t.project.bronnen }}</h2>
       <ul class="bronlijst">
         {%- for b in bronnen %}
-        <li><a href="{{ b.url }}">{{ b.titel }}</a>{% if b.bron %} <span class="bronlijst__meta">({{ b.bron }})</span>{% endif %}</li>
+        <li><a href="{{ b.url }}"{% if b.taal and b.taal != lang %} hreflang="{{ b.taal }}"{% endif %}>{{ b.titel }}</a>{% if b.bron %} <span class="bronlijst__meta">({{ b.bron }})</span>{% endif %}</li>
         {%- endfor %}
       </ul>
       {%- endif %}
 
-      <p class="bijgewerkt">Laatste inhoudelijke update: <time datetime="{{ bijgewerkt | datumISO }}">{{ bijgewerkt | datumNL }}</time></p>
+      <p class="bijgewerkt">{{ t.project.bijgewerkt }}: <time datetime="{{ bijgewerkt | datumISO }}">{{ bijgewerkt | datum(lang) }}</time></p>
     </div>
   </div>
 
-  {{ nieuwsbriefCta(site, titel="Op de hoogte blijven van dit project?", tekst="Nieuws over dit en andere projecten delen we via de nieuwsbrief.") }}
+  {{ nieuwsbriefCta(t.project.ctaTitel, t.project.ctaTekst) }}
 </div>

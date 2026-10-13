@@ -36,12 +36,16 @@ bronnen:
   - titel: Subsidie groendaken en plantenmuren
     url: https://www.nijmegen.nl/diensten/subsidies/subsidie-groendaken-en-plantenmuren/
     bron: Gemeente Nijmegen
+    taal: nl
   - titel: Geveltuin aanleggen in Nijmegen, tips en richtlijnen (Operatie Steenbreek)
     url: https://www.debastei.nl/media/5143
     bron: De Bastei
+    taal: nl
   - titel: Meld & Herstel (ook voor groen in de openbare ruimte)
     url: https://www.nijmegen.nl/diensten/melden-aan-de-gemeente/meld-herstel/
     bron: Gemeente Nijmegen
+    taal: nl
+vertaling: /en/projects/greening/
 ---
 
 ### Wie beslist waarover?

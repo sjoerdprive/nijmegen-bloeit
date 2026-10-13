@@ -24,6 +24,7 @@ volgende_stappen:
 meedoen:
   - "**Ben je ondernemer of eigenaar in de straat?** We horen graag wat jij nodig hebt: mail naar [info@nijmegenbloeit.online](mailto:info@nijmegenbloeit.online)."
 bronnen: []
+vertaling: /en/projects/streetscape-and-shops/
 ---
 
 Een straat met een goed straatbeeld en een gevarieerd aanbod ontstaat niet in één keer. Het is

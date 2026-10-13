@@ -1,0 +1,83 @@
+---
+layout: layouts/base.njk
+permalink: /en/
+vertaling: /
+foto:
+  src: /img/plein-1944-stevenskerk.webp
+  alt: New apartment buildings on Plein 1944 with the tower of the Stevenskerk between them, under a blue sky
+  breedte: 1200
+  hoogte: 1259
+  onderschrift: Plein 1944, where the Bloemerstraat begins, with a view of the Stevenskerk (2013)
+  maker: Havang(nl), via Wikimedia Commons
+  bronUrl: https://commons.wikimedia.org/wiki/File:Nijmegen_toren_Stevenskerk_vanaf_vernieuwde_Plein_%2744.JPG
+  licentie: CC0
+  licentieUrl: https://creativecommons.org/publicdomain/zero/1.0/deed.en
+  bewerking: cropped
+  beschrijving: the Bloemerstraat, for example seen from Plein 1944
+seoTitel: "Nijmegen bloeit – neighbourhood initiative for the Bloemerstraat"
+description: "Neighbourhood initiative for the Bloemerstraat in Nijmegen city centre. Working together on a cleaner, greener and livelier street, starting with graffiti."
+---
+{% from "components/macros.njk" import statusBadge, nieuwsbriefCta, projectRij, afbeelding with context %}
+{%- set t = i18n[lang] -%}
+{%- set lopend = collections.projects | metStatus("lopend") | first -%}
+<section class="hero" aria-labelledby="hero-titel">
+  <div class="wrap hero__inner">
+    <div class="hero__tekst">
+      <p class="hero__kicker">Neighbourhood initiative in Nijmegen city centre</p>
+      <h1 id="hero-titel" class="hero__titel">{{ t.sloganHtml | safe }}</h1>
+      <p class="hero__intro">Nijmegen bloeit (“Nijmegen blooms”) wants to work with residents, businesses and property owners towards a more attractive, cleaner and livelier Bloemerstraat and surrounding area in Nijmegen. We are starting with something concrete: removing graffiti.</p>
+      <p><a class="button" href="{{ site.nieuwsbrief.url }}">{{ t.cta.knop }}<span class="visually-hidden">{{ t.cta.knopExtra }}</span></a></p>
+      <p class="hero__noot">Sign-up is handled by the external service Zendlijst. <a href="/en/privacy/">Read how we handle your data</a>.</p>
+    </div>
+    {{ afbeelding(foto, "hero") }}
+  </div>
+</section>
+
+<div class="wrap">
+  <section class="sectie twee-kolommen" aria-labelledby="waarom-titel">
+    <h2 id="waarom-titel">Why this initiative?</h2>
+    <div class="prose">
+      <p>The Bloemerstraat is developing into a place with a fresh, varied and alternative range of shops and venues. We would like to build on that identity, while preserving the character of the area.</p>
+      <p>There is also work to be done: graffiti, façades that could do with a facelift, and little greenery.</p>
+      <p>Nijmegen bloeit wants to bring these improvements together: with small, concrete steps, and with residents, businesses and owners who support the initiative. The more people get involved, the more we can achieve together. The initiative is just getting started and is currently run by one person. <a href="/en/about/">Read more about the initiative</a>.</p>
+    </div>
+  </section>
+
+  <section class="sectie uitgelicht" aria-labelledby="nu-titel">
+    <p class="kicker">What is happening now</p>
+    <h2 id="nu-titel">{{ lopend.data.title }}</h2>
+    <p>{{ statusBadge(lopend.data.status) }}</p>
+    <p>{{ lopend.data.samenvatting }}</p>
+    <p><a class="pijllink" href="{{ lopend.url }}">Read more about the graffiti project and how you can help</a></p>
+  </section>
+
+  <section class="sectie" aria-labelledby="plannen-titel">
+    <h2 id="plannen-titel">Plans for later</h2>
+    <p class="sectie__intro">These are ambitions and ideas. They have not started yet and nothing has been agreed.</p>
+    <ol class="projectlijst">
+      {%- for project in collections.projects %}{% if project.data.status != "lopend" %}
+      {{ projectRij(project) }}
+      {%- endif %}{% endfor %}
+    </ol>
+    <p><a class="pijllink" href="/en/projects/">See all plans and projects</a></p>
+  </section>
+
+  {{ nieuwsbriefCta("", "Sign up for the newsletter to stay up to date on plans, projects and ways to get involved. Questions in English are always welcome at info@nijmegenbloeit.online.") }}
+
+  <section class="sectie twee-kolommen" aria-labelledby="helpen-titel">
+    <h2 id="helpen-titel">Would you like to help organise?</h2>
+    <div class="prose">
+      <p>We would really appreciate it. The initiative is just getting started and is currently run by one person. First we want to find out how much interest there is. As the initiative grows, we will create more ways to help, contribute ideas and organise projects.</p>
+      <p>Want to help, or have an idea? Email <a href="mailto:{{ site.contact.email }}">{{ site.contact.email }}</a>, in English or Dutch. If you mainly want to stay informed, sign up for the newsletter. <a href="/en/newsletter/">Also read the frequently asked questions</a>.</p>
+    </div>
+  </section>
+
+  <section class="sectie twee-kolommen" aria-labelledby="zelf-titel">
+    <h2 id="zelf-titel">Getting started in the neighbourhood</h2>
+    <div class="prose">
+      <p>Are you a resident, business owner or property owner? The Nijmegen bloeit neighbourhood guide lists municipal schemes for façades and greenery, and explains how to report graffiti, litter and broken facilities.</p>
+      <p>Nijmegen bloeit wants to bring together plans from neighbours, businesses and owners: working together can also mean a higher grant. Do you have a plan? Let us know at <a href="mailto:{{ site.contact.email }}">{{ site.contact.email }}</a>.</p>
+      <p><a class="pijllink" href="/en/neighbourhood-guide/">Go to the neighbourhood guide</a></p>
+    </div>
+  </section>
+</div>

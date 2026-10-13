@@ -1,0 +1,25 @@
+---
+layout: layouts/page.njk
+title: Sitemap
+permalink: /en/sitemap/
+vertaling: /sitemap/
+seoTitel: "Sitemap | Nijmegen bloeit"
+description: "Overview of all pages on the Nijmegen bloeit website."
+---
+<ul>
+  <li><a href="/en/">Home</a></li>
+  <li><a href="/en/projects/">Plans and projects</a>
+    <ul>
+      {%- for project in collections.projects %}
+      <li><a href="{{ project.url }}">{{ project.data.title }}</a></li>
+      {%- endfor %}
+    </ul>
+  </li>
+  <li><a href="/en/neighbourhood-guide/">Neighbourhood guide</a></li>
+  <li><a href="/en/about/">About the initiative</a></li>
+  <li><a href="/en/newsletter/">Newsletter and FAQ</a></li>
+  <li><a href="/en/privacy/">Privacy statement</a></li>
+  <li><a href="/en/accessibility/">Accessibility</a></li>
+</ul>
+
+<p>There is also a <a href="/sitemap.xml">sitemap in XML format</a> for search engines. The Dutch version of this website is listed on the <a href="/sitemap/" lang="nl" hreflang="nl">Dutch sitemap</a>.</p>

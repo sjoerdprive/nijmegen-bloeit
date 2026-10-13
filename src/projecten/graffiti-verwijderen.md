@@ -30,9 +30,12 @@ bronnen:
   - titel: Graffiti melden
     url: https://www.nijmegen.nl/diensten/melden-aan-de-gemeente/graffiti-melden/
     bron: Gemeente Nijmegen
+    taal: nl
   - titel: Meld & Herstel
     url: https://www.nijmegen.nl/diensten/melden-aan-de-gemeente/meld-herstel/
     bron: Gemeente Nijmegen
+    taal: nl
+vertaling: /en/projects/graffiti-removal/
 ---
 
 Graffiti is een van de zichtbaarste dingen die afbreuk doen aan het straatbeeld van de
