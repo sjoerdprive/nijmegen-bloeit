@@ -31,7 +31,9 @@ export default function (eleventyConfig) {
   eleventyConfig.addFilter("absoluteUrl", (path, base) => new URL(path, base).href);
 
   // Externe links openen in een nieuw venster, met rel="nofollow noopener".
+  // Uitzondering: links naar Zendlijst krijgen geen nofollow (daar geven we graag een backlink).
   // Een pijltje en een verborgen tekst vertellen bezoekers dat er een nieuw venster opent.
+  const volgen = (href) => /^https?:\/\/([a-z0-9-]+\.)*zendlijst\.nl(\/|$)/i.test(href);
   eleventyConfig.addTransform("externeLinks", function (content) {
     if (!(this.page.outputPath || "").endsWith(".html")) return content;
     return content.replace(
@@ -39,7 +41,7 @@ export default function (eleventyConfig) {
       (match, voor, href, na, tekst) => {
         if (href.startsWith(site.domein) || /\btarget=/.test(voor + na)) return match;
         return (
-          `<a ${voor}href="${href}"${na} target="_blank" rel="nofollow noopener">${tekst}` +
+          `<a ${voor}href="${href}"${na} target="_blank" rel="${volgen(href) ? "noopener" : "nofollow noopener"}">${tekst}` +
           `<span class="extern" aria-hidden="true">↗</span>` +
           `<span class="visually-hidden"> (opent in een nieuw venster)</span></a>`
         );
