@@ -3,11 +3,11 @@ layout: layouts/page.njk
 title: Newsletter and FAQ
 permalink: /en/newsletter/
 vertaling: /nieuwsbrief/
-seoTitel: "Get involved and newsletter | Nijmegen bloeit"
-description: "Get involved with Nijmegen bloeit in Nijmegen: sign up for the newsletter and read answers to questions about helping, membership and donations."
+seoTitel: "Get involved and newsletter | Nijmegen Bloeit"
+description: "Get involved with Nijmegen Bloeit in Nijmegen: sign up for the newsletter and read answers to questions about helping, membership and donations."
 # Frequently asked questions. Add a question by copying a block; keep it in line with the Dutch page.
 faq:
-  - vraag: What is the goal of Nijmegen bloeit?
+  - vraag: What is the goal of Nijmegen Bloeit?
     antwoord: >-
       We want to contribute to a more attractive, cleaner and livelier Bloemerstraat and
       surrounding area. We are starting by removing graffiti. In time we also want to work on
@@ -35,7 +35,7 @@ faq:
     antwoord: >-
       Email [info@nijmegenbloeit.online](mailto:info@nijmegenbloeit.online) if you would like to
       help. You can also sign up for the newsletter to stay informed about plans and projects. And
-      you can already contribute to the Nijmegen bloeit graffiti approach by reporting graffiti
+      you can already contribute to the Nijmegen Bloeit graffiti approach by reporting graffiti
       in the neighbourhood to the municipality. See the [neighbourhood guide](/en/neighbourhood-guide/).
   - vraag: Can I become a member? Is there a membership fee?
     antwoord: >-
@@ -49,7 +49,7 @@ faq:
     toonContact: true
   - vraag: Is this a website of the municipality?
     antwoord: >-
-      No. Nijmegen bloeit is an independent neighbourhood initiative. We do refer to information
+      No. Nijmegen Bloeit is an independent neighbourhood initiative. We do refer to information
       from the Municipality of Nijmegen, with a link to the source.
 ---
 {% from "components/macros.njk" import nieuwsbriefCta, faqLijst with context %}
@@ -62,7 +62,7 @@ we can also improve façades, greenery and the streetscape over time.
 
 Sign up for the newsletter to stay up to date on plans, projects and ways to get involved.
 
-{{ nieuwsbriefCta("Sign up", "The newsletter keeps you up to date on Nijmegen bloeit. Want to respond or help? Email info@nijmegenbloeit.online.") }}
+{{ nieuwsbriefCta("Sign up", "The newsletter keeps you up to date on Nijmegen Bloeit. Want to respond or help? Email info@nijmegenbloeit.online.") }}
 
 <div class="qr">
   <img src="{{ site.nieuwsbrief.qrCode }}" alt="QR code linking to the newsletter sign-up page" width="160" height="160" loading="lazy">

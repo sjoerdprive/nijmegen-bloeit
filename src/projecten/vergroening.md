@@ -31,7 +31,7 @@ volgende_stappen:
   - Bij de gemeente navragen wat er in de openbare ruimte mogelijk is.
 meedoen:
   - "**Heb je een idee voor groen in de straat?** Mail het naar [info@nijmegenbloeit.online](mailto:info@nijmegenbloeit.online)."
-  - "**Wil je een geveltuin of gevelgroen?** Doe het samen met de buren via Nijmegen bloeit: bij minimaal vijf aangrenzende geveltuinen is de gemeentelijke subsidie hoger. Nijmegen bloeit wil geïnteresseerden hiervoor bij elkaar brengen: mail naar [info@nijmegenbloeit.online](mailto:info@nijmegenbloeit.online) als je mee wilt doen. Zie ook de [subsidie voor groendaken en plantenmuren](https://www.nijmegen.nl/diensten/subsidies/subsidie-groendaken-en-plantenmuren/)."
+  - "**Wil je een geveltuin of gevelgroen?** Doe het samen met de buren via Nijmegen Bloeit: bij minimaal vijf aangrenzende geveltuinen is de gemeentelijke subsidie hoger. Nijmegen Bloeit wil geïnteresseerden hiervoor bij elkaar brengen: mail naar [info@nijmegenbloeit.online](mailto:info@nijmegenbloeit.online) als je mee wilt doen. Zie ook de [subsidie voor groendaken en plantenmuren](https://www.nijmegen.nl/diensten/subsidies/subsidie-groendaken-en-plantenmuren/)."
 bronnen:
   - titel: Subsidie groendaken en plantenmuren
     url: https://www.nijmegen.nl/diensten/subsidies/subsidie-groendaken-en-plantenmuren/
@@ -61,7 +61,7 @@ Voor sommige veranderingen aan een pand is een omgevingsvergunning nodig.
 Voor groendaken, groengevels, verticale tuinen en geveltuinen heeft de gemeente een
 subsidieregeling. Volgens de gemeente is de bijdrage voor geveltuinen hoger als minimaal vijf
 aangrenzende geveltuinen samen worden aangelegd. Dat maakt een gezamenlijke aanpak via
-Nijmegen bloeit interessant.
+Nijmegen Bloeit interessant.
 
 **Groen op de stoep en in de straat**
 

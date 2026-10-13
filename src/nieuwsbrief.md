@@ -2,13 +2,13 @@
 layout: layouts/page.njk
 title: Nieuwsbrief en veelgestelde vragen
 permalink: /nieuwsbrief/
-seoTitel: "Meedoen en nieuwsbrief | Nijmegen bloeit"
-description: "Doe mee met Nijmegen bloeit in Nijmegen: schrijf je in voor de nieuwsbrief en lees antwoorden op vragen over meehelpen, lidmaatschap en donaties."
+seoTitel: "Meedoen en nieuwsbrief | Nijmegen Bloeit"
+description: "Doe mee met Nijmegen Bloeit in Nijmegen: schrijf je in voor de nieuwsbrief en lees antwoorden op vragen over meehelpen, lidmaatschap en donaties."
 # Veelgestelde vragen. Voeg een vraag toe door een blok te kopiëren.
 # "antwoord" mag Markdown bevatten. Met "id" kun je ernaar linken (/nieuwsbrief/#id).
 # "toonContact: true" voegt de contacttekst uit _data/i18n.js toe aan het antwoord.
 faq:
-  - vraag: Wat is het doel van Nijmegen bloeit?
+  - vraag: Wat is het doel van Nijmegen Bloeit?
     antwoord: >-
       We willen bijdragen aan een aantrekkelijkere, schonere en levendigere Bloemerstraat en
       omgeving. We beginnen met het verwijderen van graffiti. Op termijn willen we ook werken aan
@@ -31,7 +31,7 @@ faq:
     antwoord: >-
       Mail naar [info@nijmegenbloeit.online](mailto:info@nijmegenbloeit.online) als je wilt helpen. Schrijf je daarnaast in
       voor de nieuwsbrief om op de hoogte te blijven van plannen en projecten. Je kunt ook nu al
-      bijdragen aan de graffitiaanpak van Nijmegen bloeit door graffiti in de buurt te melden bij
+      bijdragen aan de graffitiaanpak van Nijmegen Bloeit door graffiti in de buurt te melden bij
       de gemeente. Kijk daarvoor in de [wegwijzer](/wegwijzer/).
   - vraag: Kan ik lid worden? Moet ik contributie betalen?
     antwoord: >-
@@ -47,7 +47,7 @@ faq:
     toonContact: true
   - vraag: Is dit een website van de gemeente?
     antwoord: >-
-      Nee. Nijmegen bloeit is een onafhankelijk buurtinitiatief. We verwijzen wel naar informatie
+      Nee. Nijmegen Bloeit is een onafhankelijk buurtinitiatief. We verwijzen wel naar informatie
       van de gemeente Nijmegen, met een link naar de bron.
 vertaling: /en/newsletter/
 ---
@@ -62,7 +62,7 @@ termijn ook gevels, groen en het straatbeeld kunnen verbeteren.
 Schrijf je in voor de nieuwsbrief en blijf op de hoogte van plannen, projecten en
 mogelijkheden om mee te doen.
 
-{{ nieuwsbriefCta("Inschrijven", "Met de nieuwsbrief blijf je op de hoogte van Nijmegen bloeit. Wil je reageren of meehelpen? Mail dan naar info@nijmegenbloeit.online.") }}
+{{ nieuwsbriefCta("Inschrijven", "Met de nieuwsbrief blijf je op de hoogte van Nijmegen Bloeit. Wil je reageren of meehelpen? Mail dan naar info@nijmegenbloeit.online.") }}
 
 <div class="qr">
   <img src="{{ site.nieuwsbrief.qrCode }}" alt="QR-code naar de inschrijfpagina van de nieuwsbrief" width="160" height="160" loading="lazy">

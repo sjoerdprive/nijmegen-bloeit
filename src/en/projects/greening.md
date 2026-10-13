@@ -32,7 +32,7 @@ volgende_stappen:
   - Ask the municipality what is possible in the public space.
 meedoen:
   - "**Do you have an idea for greenery in the street?** Email it to [info@nijmegenbloeit.online](mailto:info@nijmegenbloeit.online)."
-  - "**Would you like a façade garden or green façade?** Do it together with your neighbours through Nijmegen bloeit: with at least five adjacent façade gardens, the municipal grant is higher. Nijmegen bloeit wants to bring interested people together for this: email [info@nijmegenbloeit.online](mailto:info@nijmegenbloeit.online) if you would like to join. See also the [grant for green roofs and green walls](https://www.nijmegen.nl/diensten/subsidies/subsidie-groendaken-en-plantenmuren/) (in Dutch)."
+  - "**Would you like a façade garden or green façade?** Do it together with your neighbours through Nijmegen Bloeit: with at least five adjacent façade gardens, the municipal grant is higher. Nijmegen Bloeit wants to bring interested people together for this: email [info@nijmegenbloeit.online](mailto:info@nijmegenbloeit.online) if you would like to join. See also the [grant for green roofs and green walls](https://www.nijmegen.nl/diensten/subsidies/subsidie-groendaken-en-plantenmuren/) (in Dutch)."
 bronnen:
   - titel: Subsidie groendaken en plantenmuren (green roofs and walls grant, in Dutch)
     url: https://www.nijmegen.nl/diensten/subsidies/subsidie-groendaken-en-plantenmuren/
@@ -61,7 +61,7 @@ Some changes to a building require an environmental permit.
 The municipality has a grant scheme for green roofs, green façades, vertical gardens and façade
 gardens. According to the municipality, the contribution for façade gardens is higher when at
 least five adjacent façade gardens are created together. That makes a joint approach through
-Nijmegen bloeit attractive.
+Nijmegen Bloeit attractive.
 
 **Greenery on the pavement and in the street**
 

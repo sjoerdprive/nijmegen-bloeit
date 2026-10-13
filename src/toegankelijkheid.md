@@ -2,8 +2,8 @@
 layout: layouts/page.njk
 title: Toegankelijkheid
 permalink: /toegankelijkheid/
-seoTitel: "Toegankelijkheid | Nijmegen bloeit"
-description: "Nijmegen bloeit wil dat de website bruikbaar is voor zoveel mogelijk mensen. Lees wat we daarvoor doen en hoe je een probleem of suggestie meldt."
+seoTitel: "Toegankelijkheid | Nijmegen Bloeit"
+description: "Nijmegen Bloeit wil dat de website bruikbaar is voor zoveel mogelijk mensen. Lees wat we daarvoor doen en hoe je een probleem of suggestie meldt."
 intro: "We doen ons best om deze website zo bruikbaar mogelijk te maken voor zoveel mogelijk mensen, ook als je een beperking hebt of een hulpmiddel gebruikt."
 vertaling: /en/accessibility/
 ---

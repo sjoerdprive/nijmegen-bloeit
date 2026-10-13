@@ -16,7 +16,7 @@ export default {
     slogan: "Laat de Bloemerstraat bloeien.",
     sloganHtml: "Laat de Bloemerstraat <em>bloeien.</em>",
     omschrijving:
-      "Nijmegen bloeit is een onafhankelijk buurtinitiatief in Nijmegen voor een aantrekkelijkere, schonere en levendigere Bloemerstraat en omgeving.",
+      "Nijmegen Bloeit is een onafhankelijk buurtinitiatief in Nijmegen voor een aantrekkelijkere, schonere en levendigere Bloemerstraat en omgeving.",
     navigatie: [
       { titel: "Projecten", url: "/projecten/" },
       { titel: "Wegwijzer", url: "/wegwijzer/" },
@@ -85,7 +85,7 @@ export default {
     slogan: "Let the Bloemerstraat bloom.",
     sloganHtml: "Let the Bloemerstraat <em>bloom.</em>",
     omschrijving:
-      "Nijmegen bloeit is an independent neighbourhood initiative in Nijmegen working towards a more attractive, cleaner and livelier Bloemerstraat and surrounding area.",
+      "Nijmegen Bloeit is an independent neighbourhood initiative in Nijmegen working towards a more attractive, cleaner and livelier Bloemerstraat and surrounding area.",
     navigatie: [
       { titel: "Projects", url: "/en/projects/" },
       { titel: "Guide", url: "/en/neighbourhood-guide/" },

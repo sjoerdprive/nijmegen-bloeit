@@ -21,7 +21,7 @@ samenvatting: >-
   Refurbishing the façades in the Bloemerstraat together: cleaning, painting, repairs and
   suitable improvements. We are now exploring whether owners are interested.
 doel: >-
-  Buildings in the street that look clean and well kept. Nijmegen bloeit wants to bring owners
+  Buildings in the street that look clean and well kept. Nijmegen Bloeit wants to bring owners
   together for this. Tackling it together through the initiative makes the work easier to manage
   and can make a joint grant application more favourable.
 gedaan:
@@ -35,7 +35,7 @@ volgende_stappen:
   - Check the current grant conditions with the municipality.
 meedoen:
   - "**Do you own or let a building in the Bloemerstraat or surrounding area?** Email [info@nijmegenbloeit.online](mailto:info@nijmegenbloeit.online) if you are interested. You can also sign up for the newsletter to stay informed."
-  - "**Do you know an owner?** Tell them about Nijmegen bloeit and this project."
+  - "**Do you know an owner?** Tell them about Nijmegen Bloeit and this project."
 bronnen:
   - titel: Subsidie voor schoonmaken gevels binnenstad (façade grant, in Dutch)
     url: https://www.nijmegen.nl/diensten/monumenten/subsidie-schoonmaken-gevels/
@@ -49,7 +49,7 @@ bronnen:
 
 Dirt, outdated paintwork and later additions such as advertising and cladding have a big
 influence on how a street looks. A facelift can make a lot of difference, especially when
-several buildings are tackled at the same time. Nijmegen bloeit wants to bring together owners
+several buildings are tackled at the same time. Nijmegen Bloeit wants to bring together owners
 who are interested and take on the process together with them.
 
 <div class="let-op">

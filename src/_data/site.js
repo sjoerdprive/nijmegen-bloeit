@@ -4,7 +4,7 @@
 // bij voorbeeldversies (deploy previews) het tijdelijke Netlify-adres, en lokaal localhost.
 // Met de omgevingsvariabele SITE_URL kun je het adres zelf vastzetten.
 export default {
-  naam: "Nijmegen bloeit",
+  naam: "Nijmegen Bloeit",
   // Slogan, omschrijving, menu en andere vaste teksten staan per taal in i18n.js.
   domein: "https://nijmegenbloeit.online",
   get url() {

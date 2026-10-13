@@ -1,6 +1,6 @@
-# Nijmegen bloeit
+# Nijmegen Bloeit
 
-Website van het buurtinitiatief **Nijmegen bloeit** in Nijmegen. *Laat de Bloemerstraat bloeien.*
+Website van het buurtinitiatief **Nijmegen Bloeit** in Nijmegen. *Laat de Bloemerstraat bloeien.*
 
 Het is een statische website, gebouwd met [Eleventy](https://www.11ty.dev/). De site is tweetalig: Nederlands op de gewone adressen en Engels onder `/en/`. Bezoekers krijgen alleen HTML en CSS te zien: geen JavaScript, geen cookies, geen tracking en geen lettertypen van andere partijen (de lettertypen staan op de site zelf). De nieuwsbrief loopt via een gewone link naar [Zendlijst](https://nijmegen-bloeit.zendlijst.nl/).
 
@@ -188,7 +188,7 @@ Een automatische scan vindt maar een deel van de toegankelijkheidsproblemen. Con
 
 ## Toon en inhoud
 
-- **Verbind gezamenlijke acties altijd aan het initiatief.** Of het nu gaat om graffiti melden, gevels of groen: presenteer het als iets wat je samen met Nijmegen bloeit doet.
+- **Verbind gezamenlijke acties altijd aan het initiatief.** Of het nu gaat om graffiti melden, gevels of groen: presenteer het als iets wat je samen met Nijmegen Bloeit doet.
 - **De nieuwsbrief is alleen om te ontvangen.** Wie wil helpen, een idee heeft of vragen stelt, verwijs je naar info@nijmegenbloeit.online (`site.contact.email`), niet naar de nieuwsbrief.
 - **Geen loftuitingen over de naoorlogse bebouwing.** De wederopbouw mag feitelijk genoemd worden (bijvoorbeeld bij de gevelsubsidie), maar beschrijf de architectuur niet als iets wat de straat karakter geeft.
 - **Niet representatief.** Het initiatief spreekt niet namens alle bewoners of ondernemers; schrijf dus niet "namens de straat" of iets dergelijks.

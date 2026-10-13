@@ -3,7 +3,7 @@ layout: layouts/page.njk
 title: Privacy statement
 permalink: /en/privacy/
 vertaling: /privacy/
-description: "How Nijmegen bloeit handles personal data, the newsletter via Zendlijst and cookies."
+description: "How Nijmegen Bloeit handles personal data, the newsletter via Zendlijst and cookies."
 # DRAFT: set noindex to false and sitemap to true once the controller has reviewed
 # this statement and all [TO BE COMPLETED] fields have been filled in (in both languages).
 noindex: true
@@ -21,7 +21,7 @@ Last updated: [TO BE COMPLETED: date of adoption]
 
 ## Who is responsible?
 
-Nijmegen bloeit is an independent neighbourhood initiative in Nijmegen. It is not (yet) a legal
+Nijmegen Bloeit is an independent neighbourhood initiative in Nijmegen. It is not (yet) a legal
 entity. The person responsible for processing personal data (the controller) is:
 
 - Name: [TO BE COMPLETED: name of the controller]

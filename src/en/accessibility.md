@@ -3,8 +3,8 @@ layout: layouts/page.njk
 title: Accessibility
 permalink: /en/accessibility/
 vertaling: /toegankelijkheid/
-seoTitel: "Accessibility | Nijmegen bloeit"
-description: "Nijmegen bloeit wants its website to be usable by as many people as possible. Read what we do to achieve this and how to report a problem or suggestion."
+seoTitel: "Accessibility | Nijmegen Bloeit"
+description: "Nijmegen Bloeit wants its website to be usable by as many people as possible. Read what we do to achieve this and how to report a problem or suggestion."
 intro: "We do our best to make this website as usable as possible for as many people as possible, including people with a disability or who use assistive technology."
 ---
 

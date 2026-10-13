@@ -2,7 +2,7 @@
 layout: layouts/page.njk
 title: Privacyverklaring
 permalink: /privacy/
-description: "Hoe Nijmegen bloeit omgaat met persoonsgegevens, de nieuwsbrief via Zendlijst en cookies."
+description: "Hoe Nijmegen Bloeit omgaat met persoonsgegevens, de nieuwsbrief via Zendlijst en cookies."
 # CONCEPT: zet noindex op false en sitemap op true zodra de verantwoordelijke
 # deze verklaring heeft gecontroleerd en alle [IN TE VULLEN]-velden zijn ingevuld.
 noindex: true
@@ -21,7 +21,7 @@ Laatst bijgewerkt: [IN TE VULLEN: datum van vaststelling]
 
 ## Wie is verantwoordelijk?
 
-Nijmegen bloeit is een onafhankelijk buurtinitiatief in Nijmegen. Het is (nog)
+Nijmegen Bloeit is een onafhankelijk buurtinitiatief in Nijmegen. Het is (nog)
 geen rechtspersoon. Verantwoordelijk voor de verwerking van persoonsgegevens is:
 
 - Naam: [IN TE VULLEN: naam van de verantwoordelijke]
