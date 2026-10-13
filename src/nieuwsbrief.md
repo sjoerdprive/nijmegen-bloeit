@@ -61,7 +61,7 @@ termijn ook gevels, groen en het straatbeeld kunnen verbeteren.
 Schrijf je in voor de nieuwsbrief en blijf op de hoogte van plannen, projecten en
 mogelijkheden om mee te doen.
 
-{{ nieuwsbriefCta(site, titel="Inschrijven", tekst="Met de nieuwsbrief blijf je op de hoogte van Nijmegen bloeit. Het is een nieuwsbrief om te ontvangen: je kunt er niet op reageren.") }}
+{{ nieuwsbriefCta(site, titel="Inschrijven", tekst="Met de nieuwsbrief blijf je op de hoogte van Nijmegen bloeit. Wil je reageren of meehelpen? Mail dan naar info@nijmegenbloeit.online.") }}
 
 <div class="qr">
   <img src="{{ site.nieuwsbrief.qrCode }}" alt="QR-code naar de inschrijfpagina van de nieuwsbrief" width="160" height="160" loading="lazy">
@@ -84,7 +84,7 @@ initiatief groeit, creëren we meer mogelijkheden om mee te helpen, ideeën aan 
 projecten te organiseren.
 
 Wil je helpen organiseren, of heb je een idee? Mail naar [info@nijmegenbloeit.online](mailto:info@nijmegenbloeit.online). De nieuwsbrief
-is om op de hoogte te blijven; je kunt er niet op reageren. Een formeel lidmaatschap of
+is bedoeld om op de hoogte te blijven. Een formeel lidmaatschap of
 contributie is er nog niet.
 
 ## Veelgestelde vragen

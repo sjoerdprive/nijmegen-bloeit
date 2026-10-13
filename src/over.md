@@ -24,10 +24,11 @@ doen, met concrete stappen in plaats van grote woorden.
 
 ## Een stukje geschiedenis
 
-Bij het bombardement van 22 februari 1944 werd een groot deel van de Nijmeegse binnenstad
-verwoest. De Bloemerstraat ligt in het gebied dat daarna opnieuw is opgebouwd; de gemeente
-rekent de straat tot het wederopbouwgebied. Dat is ook de reden dat pandeigenaren hier
-gebruik kunnen maken van een gemeentelijke subsidie voor het opknappen van gevels.
+Bij het [bombardement van 22 februari 1944](https://nl.wikipedia.org/wiki/Bombardement_op_Nijmegen_(22_februari_1944))
+werd een groot deel van de Nijmeegse binnenstad verwoest, waaronder het noordelijke deel van de
+Bloemerstraat. De gemeente rekent de straat tot het wederopbouwgebied. Daardoor kunnen
+eigenaren van naoorlogse panden in de straat gebruikmaken van een
+[gemeentelijke subsidie voor het opknappen van gevels](/projecten/gevelverbetering/).
 
 ## Onze ambitie
 

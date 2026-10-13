@@ -571,29 +571,31 @@ main:focus {
 
 .statuslegenda {
   display: grid;
-  gap: var(--ruimte-1) var(--ruimte-3);
+  gap: var(--ruimte-1);
   margin: 0;
 }
 
+/* Status en uitleg naast elkaar als er ruimte is; anders onder elkaar (ook bij inzoomen). */
 .statuslegenda > div {
-  display: grid;
-  gap: 0.25rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.25rem var(--ruimte-3);
+}
+
+.statuslegenda dt {
+  flex: 0 1 16rem;
+  max-width: 100%;
 }
 
 .statuslegenda dd {
+  flex: 1 1 14rem;
   margin: 0 0 var(--ruimte-1);
   color: var(--kleur-tekst-zacht);
 }
 
-@media (min-width: 40em) {
-  .statuslegenda > div {
-    grid-template-columns: 16rem 1fr;
-    align-items: center;
-  }
-
-  .statuslegenda dd {
-    margin: 0;
-  }
+.statuslegenda .status {
+  white-space: normal;
 }
 
 /* ---------- Kaarten ---------- */
@@ -606,11 +608,11 @@ main:focus {
 
 @media (min-width: 40em) {
   .kaarten {
-    grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(min(18rem, 100%), 1fr));
   }
 
   .kaarten--breed {
-    grid-template-columns: repeat(auto-fill, minmax(26rem, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(min(26rem, 100%), 1fr));
   }
 }
 
@@ -735,7 +737,7 @@ main:focus {
 
 @media (min-width: 40em) {
   .infoblokken {
-    grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(min(18rem, 100%), 1fr));
   }
 }
 
@@ -803,6 +805,13 @@ main:focus {
   margin: 0;
   font-size: 0.9375rem;
   color: var(--kleur-tekst-zacht);
+}
+
+.extern {
+  display: inline-block;
+  margin-left: 0.15em;
+  font-size: 0.85em;
+  text-decoration: none;
 }
 
 .foto__bron a {

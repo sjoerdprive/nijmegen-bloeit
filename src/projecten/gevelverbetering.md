@@ -44,8 +44,8 @@ bronnen:
     bron: Rijksoverheid
 ---
 
-Vuil, verouderd schilderwerk en later aangebrachte reclames en betimmeringen bepalen voor een
-groot deel hoe de Bloemerstraat eruitziet. Een opknapbeurt kan veel verschil maken, zeker als
+Vuil, verouderd schilderwerk en later aangebrachte reclames en betimmeringen hebben veel
+invloed op hoe een straat eruitziet. Een opknapbeurt kan veel verschil maken, zeker als
 meerdere panden tegelijk worden aangepakt. Nijmegen bloeit wil eigenaren die dat
 willen bij elkaar brengen en het proces samen met hen oppakken.
 
@@ -54,7 +54,7 @@ willen bij elkaar brengen en het proces samen met hen oppakken.
 **Belangrijk om te weten**
 
 - Dit is een **ambitie**. Er is nog niets afgesproken en niets toegezegd.
-- **Eigenaren betalen zelf een deel van de kosten.** Een subsidie dekt nooit alles.
+- **Eigenaren betalen zelf een deel van de kosten.** De gemeentelijke subsidie vergoedt 40 tot 50 procent, met een maximum per gebouw.
 - **Subsidie is niet gegarandeerd.** De gemeente beoordeelt elke aanvraag en de regels kunnen veranderen.
 - Of een project doorgaat, hangt af van de belangstelling en de keuzes van eigenaren zelf.
 

@@ -13,10 +13,12 @@ We streven naar de richtlijnen voor digitale toegankelijkheid, de
 [WCAG 2.2](https://www.w3.org/Translations/WCAG22-nl/) op niveau AA. Dat betekent onder meer:
 
 - de website is volledig met het toetsenbord te bedienen, met een duidelijk zichtbare focus;
-- teksten hebben voldoende contrast en blijven leesbaar als je inzoomt;
+- teksten hebben voldoende contrast en blijven leesbaar als je inzoomt tot 400 procent;
 - informatie wordt nooit alleen met kleur overgebracht;
 - de website werkt op mobiel, tablet en computer;
 - foto's hebben een beschrijving voor wie ze niet kan zien;
+- links naar andere websites openen in een nieuw venster; dat staat erbij met een pijltje (↗)
+  en een tekst voor schermlezers;
 - er zijn geen bewegende beelden, video's die vanzelf starten of pop-ups.
 
 We controleren de website met automatische tests en met de hand. Een automatische test vindt

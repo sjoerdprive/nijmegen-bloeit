@@ -13,8 +13,7 @@ samenvatting: >-
   Onze eerste concrete activiteit: graffiti in de Bloemerstraat en omgeving laten verdwijnen,
   samen met een bestaande gemeentelijke groep.
 doel: >-
-  Een schonere, verzorgde straat waar graffiti snel verdwijnt. Een straat die er goed
-  onderhouden uitziet, nodigt minder uit tot nieuwe graffiti en is prettiger voor
+  Een schonere, verzorgde straat waar graffiti snel verdwijnt, en die prettiger is voor
   bewoners, bezoekers en ondernemers.
 gedaan:
   - Het initiatief is gestart met het aanpakken van graffiti, in samenwerking met een bestaande gemeentelijke groep.

@@ -1,5 +1,6 @@
 import { load as yamlLoad } from "js-yaml";
 import markdownIt from "markdown-it";
+import site from "./src/_data/site.js";
 
 const md = markdownIt({ html: true, typographer: true });
 
@@ -28,6 +29,23 @@ export default function (eleventyConfig) {
     projecten.filter((p) => p.data.status === status),
   );
   eleventyConfig.addFilter("absoluteUrl", (path, base) => new URL(path, base).href);
+
+  // Externe links openen in een nieuw venster, met rel="nofollow noopener".
+  // Een pijltje en een verborgen tekst vertellen bezoekers dat er een nieuw venster opent.
+  eleventyConfig.addTransform("externeLinks", function (content) {
+    if (!(this.page.outputPath || "").endsWith(".html")) return content;
+    return content.replace(
+      /<a\s([^>]*?)href="(https?:\/\/[^"]+)"([^>]*)>([\s\S]*?)<\/a>/g,
+      (match, voor, href, na, tekst) => {
+        if (href.startsWith(site.domein) || /\btarget=/.test(voor + na)) return match;
+        return (
+          `<a ${voor}href="${href}"${na} target="_blank" rel="nofollow noopener">${tekst}` +
+          `<span class="extern" aria-hidden="true">↗</span>` +
+          `<span class="visually-hidden"> (opent in een nieuw venster)</span></a>`
+        );
+      },
+    );
+  });
 
   // Alle projecten, gesorteerd op het veld "volgorde".
   eleventyConfig.addCollection("projecten", (api) =>
