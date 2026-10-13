@@ -60,17 +60,27 @@
     foto:
       src: /img/bloemerstraat.webp   # leeg laten zolang er nog geen foto is
       alt: Beschrijving van wat er op de foto te zien is
+      breedte: 1600                  # afmetingen van het bestand in pixels
+      hoogte: 900
       onderschrift: Optioneel bijschrift
+      maker: Naam van de fotograaf   # bronvermelding, altijd invullen
+      bronUrl: https://…             # pagina waar de foto vandaan komt
+      licentie: CC BY 4.0            # of "eigen foto"
+      licentieUrl: https://…
+      bewerking: uitsnede            # optioneel, als de foto is aangepast
       beschrijving: Wat voor foto hier zou passen (alleen voor de placeholder)
   Zonder src toont de site een placeholder, zolang site.fotoPlaceholders aan staat.
 #}
 {% macro afbeelding(foto, site, variant="breed") -%}
 {%- if foto and foto.src %}
 <figure class="foto foto--{{ variant }}">
-  <img src="{{ foto.src }}" alt="{{ foto.alt }}" loading="lazy" decoding="async">
-  {%- if foto.onderschrift %}
-  <figcaption>{{ foto.onderschrift }}</figcaption>
-  {%- endif %}
+  <img src="{{ foto.src }}" alt="{{ foto.alt }}"{% if foto.breedte %} width="{{ foto.breedte }}" height="{{ foto.hoogte }}"{% endif %} {% if variant == "hero" %}fetchpriority="high"{% else %}loading="lazy"{% endif %} decoding="async">
+  <figcaption>
+    {%- if foto.onderschrift %}{{ foto.onderschrift }}. {% endif -%}
+    <span class="foto__bron">Foto: {% if foto.bronUrl %}<a href="{{ foto.bronUrl }}">{{ foto.maker }}</a>{% else %}{{ foto.maker }}{% endif %}
+    {%- if foto.licentie %}, {% if foto.licentieUrl %}<a href="{{ foto.licentieUrl }}">{{ foto.licentie }}</a>{% else %}{{ foto.licentie }}{% endif %}{% endif %}
+    {%- if foto.bewerking %} ({{ foto.bewerking }}){% endif %}.</span>
+  </figcaption>
 </figure>
 {%- elif foto and site.fotoPlaceholders %}
 <figure class="foto foto--{{ variant }} foto--placeholder" aria-hidden="true">
@@ -104,7 +114,7 @@
 {%- if site.contact.email -%}
 Graag! Stuur je idee of voorstel naar <a href="mailto:{{ site.contact.email }}">{{ site.contact.email }}</a>.
 {%- else -%}
-Op dit moment is er nog geen manier om ideeën in te sturen. Later openen we daar kanalen voor; in de nieuwsbrief lees je wanneer dat zover is.
+Er is nog geen contactadres. Schrijf je in voor de nieuwsbrief om op de hoogte te blijven.
 {%- endif -%}
 {%- endmacro %}
 

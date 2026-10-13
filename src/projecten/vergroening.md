@@ -1,7 +1,15 @@
 ---
 foto:
-  src: ""
-  alt: ""
+  src: /img/bloemerstraat-plantenbak-2018.webp
+  alt: Plantenbak met struiken en kleine bomen op een parkeerplek in de Bloemerstraat, met terrassen aan de overkant
+  breedte: 1560
+  hoogte: 1080
+  onderschrift: Tijdelijk groen op parkeerplekken in de Bloemerstraat, juni 2018
+  maker: RN7, via Wikimedia Commons
+  bronUrl: https://commons.wikimedia.org/wiki/File:Parkeerplaatsen_worden_parken_op_de_Nijmeegse_Bloemerstraat.webm
+  licentie: CC BY 3.0
+  licentieUrl: https://creativecommons.org/licenses/by/3.0/deed.nl
+  bewerking: stilstaand beeld uit video, uitsnede
   beschrijving: een geveltuin of ander groen in de straat
 title: Vergroening
 volgorde: 3
@@ -22,8 +30,8 @@ volgende_stappen:
   - Uitzoeken waar in de straat ruimte is voor groen.
   - Bij de gemeente navragen wat er in de openbare ruimte mogelijk is.
 meedoen:
-  - "**Heb je een idee voor groen in de straat?** Schrijf je in voor de nieuwsbrief; daarin lees je wanneer we ideeën gaan verzamelen."
-  - "**Wil je een geveltuin of gevelgroen?** Doe het samen met de buren via Nijmegen Bloeit: bij minimaal vijf aangrenzende geveltuinen is de gemeentelijke bijdrage hoger. Nijmegen Bloeit wil geïnteresseerden hiervoor bij elkaar brengen; in de nieuwsbrief lees je wanneer dat kan. Zie ook de [subsidie voor groendaken en plantenmuren](https://www.nijmegen.nl/diensten/subsidies/subsidie-groendaken-en-plantenmuren/)."
+  - "**Heb je een idee voor groen in de straat?** Mail het naar [info@nijmegenbloeit.online](mailto:info@nijmegenbloeit.online)."
+  - "**Wil je een geveltuin of gevelgroen?** Doe het samen met de buren via Nijmegen bloeit: bij minimaal vijf aangrenzende geveltuinen is de gemeentelijke bijdrage hoger. Nijmegen bloeit wil geïnteresseerden hiervoor bij elkaar brengen: mail naar [info@nijmegenbloeit.online](mailto:info@nijmegenbloeit.online) als je mee wilt doen. Zie ook de [subsidie voor groendaken en plantenmuren](https://www.nijmegen.nl/diensten/subsidies/subsidie-groendaken-en-plantenmuren/)."
 bronnen:
   - titel: Subsidie groendaken en plantenmuren
     url: https://www.nijmegen.nl/diensten/subsidies/subsidie-groendaken-en-plantenmuren/
@@ -44,7 +52,7 @@ bronnen:
 Voor groendaken, groengevels, verticale tuinen en geveltuinen heeft de gemeente een
 subsidieregeling. Volgens de gemeente is de bijdrage voor geveltuinen hoger als minimaal vijf
 aangrenzende geveltuinen samen worden aangelegd. Dat maakt een gezamenlijke aanpak via
-Nijmegen Bloeit interessant.
+Nijmegen bloeit interessant.
 
 **Waarvoor de gemeente toestemming moet geven**
 

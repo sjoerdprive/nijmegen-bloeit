@@ -6,22 +6,23 @@ foto:
 title: Straatbeeld en winkelaanbod
 volgorde: 4
 status: idee
-bijgewerkt: 2026-10-12
+bijgewerkt: 2026-10-13
 seoTitel: "Straatbeeld en winkelaanbod – Bloemerstraat Nijmegen"
-description: "Langetermijnambitie voor de Bloemerstraat in de binnenstad van Nijmegen: een verzorgde winkelstraat met meer variatie en ruimte voor lokale ondernemers en horeca."
+description: "Langetermijnambitie voor de Bloemerstraat in Nijmegen: voortbouwen op het frisse, gevarieerde en alternatieve aanbod van de straat, met behoud van haar karakter."
 samenvatting: >-
-  Een langetermijnambitie: een aantrekkelijke, verzorgde straat met meer variatie en ruimte
-  voor kwalitatieve lokale ondernemingen en horeca.
+  Een langetermijnambitie: voortbouwen op het frisse, gevarieerde en alternatieve aanbod dat de
+  Bloemerstraat steeds meer kenmerkt, in een verzorgde straat die haar karakter behoudt.
 doel: >-
-  Een Bloemerstraat waar het prettig winkelen, wonen en verblijven is, met een gevarieerd
-  aanbod waar buurtbewoners en bezoekers graag naartoe gaan.
+  Een Bloemerstraat waar het prettig winkelen, wonen en verblijven is. Een straat die haar eigen
+  identiteit verder ontwikkelt, met een fris, gevarieerd en alternatief aanbod waar
+  buurtbewoners en bezoekers graag naartoe gaan, en die het karakter van de omgeving bewaart.
 gedaan:
   - Dit is een idee voor de lange termijn. Er zijn nog geen concrete stappen gezet.
 volgende_stappen:
   - In gesprek gaan met ondernemers en pandeigenaren over hun ervaringen en wensen.
   - Onderzoeken welke rol een buurtinitiatief hierin kan spelen.
 meedoen:
-  - "**Ben je ondernemer of eigenaar in de straat?** Schrijf je in voor de nieuwsbrief. Later willen we graag horen wat jij nodig hebt; in de nieuwsbrief lees je wanneer en hoe."
+  - "**Ben je ondernemer of eigenaar in de straat?** We horen graag wat jij nodig hebt: mail naar [info@nijmegenbloeit.online](mailto:info@nijmegenbloeit.online)."
 bronnen: []
 ---
 

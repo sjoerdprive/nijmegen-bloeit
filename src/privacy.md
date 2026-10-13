@@ -2,7 +2,7 @@
 layout: layouts/page.njk
 title: Privacyverklaring
 permalink: /privacy/
-description: "Hoe Nijmegen Bloeit omgaat met persoonsgegevens, de nieuwsbrief via Zendlijst en cookies."
+description: "Hoe Nijmegen bloeit omgaat met persoonsgegevens, de nieuwsbrief via Zendlijst en cookies."
 # CONCEPT: zet noindex op false en sitemap op true zodra de verantwoordelijke
 # deze verklaring heeft gecontroleerd en alle [IN TE VULLEN]-velden zijn ingevuld.
 noindex: true
@@ -20,11 +20,11 @@ Laatst bijgewerkt: [IN TE VULLEN: datum van vaststelling]
 
 ## Wie is verantwoordelijk?
 
-Nijmegen Bloeit is een onafhankelijk buurtinitiatief in Nijmegen. Het is (nog)
+Nijmegen bloeit is een onafhankelijk buurtinitiatief in Nijmegen. Het is (nog)
 geen rechtspersoon. Verantwoordelijk voor de verwerking van persoonsgegevens is:
 
 - Naam: [IN TE VULLEN: naam van de verantwoordelijke]
-- Contact: [IN TE VULLEN: e-mailadres voor privacyvragen]
+- Contact: [info@nijmegenbloeit.online](mailto:info@nijmegenbloeit.online)
 
 ## Deze website
 
@@ -49,7 +49,7 @@ altijd intrekken door je uit te schrijven.
 ### Wie verstuurt de nieuwsbrief?
 
 We gebruiken de dienst **Zendlijst** (zendlijst.nl). Zendlijst bewaart en verstuurt de gegevens
-in onze opdracht (als verwerker). Volgens de [privacy-informatie van Zendlijst](https://bloemerstraat-en-omstreken.zendlijst.nl/privacy):
+in onze opdracht (als verwerker). Volgens de [privacy-informatie van Zendlijst](https://nijmegen-bloeit.zendlijst.nl/privacy):
 
 - worden e-mailadressen versleuteld opgeslagen;
 - worden de gegevens verwerkt door de dienstverleners Vercel en Neon (in Frankfurt, Duitsland) en worden e-mails verstuurd via Resend (vanuit Ierland). Dit zijn Amerikaanse bedrijven;
@@ -67,8 +67,20 @@ verwijderen.
 
 ### Uitschrijven
 
-Elke nieuwsbrief bevat een afmeldlink. Je kunt je ook uitschrijven door contact met ons op te
-nemen.
+Elke nieuwsbrief bevat een afmeldlink. Je kunt je ook uitschrijven door te mailen naar
+[info@nijmegenbloeit.online](mailto:info@nijmegenbloeit.online).
+
+## Contact per e-mail
+
+Stuur je een e-mail naar info@nijmegenbloeit.online, dan verwerken we je e-mailadres, je naam
+(als je die noemt) en de inhoud van je bericht. We gebruiken die gegevens alleen om je bericht te
+beantwoorden en, als je wilt meehelpen, om contact met je te houden over het initiatief. De
+grondslag is ons gerechtvaardigd belang om berichten te kunnen beantwoorden, of je toestemming
+als je aangeeft dat je wilt meehelpen. We bewaren e-mails niet langer dan nodig:
+[IN TE VULLEN: bewaartermijn, bijvoorbeeld "tot twaalf maanden na het laatste contact"].
+
+De e-mail wordt verwerkt door onze e-mailprovider: [IN TE VULLEN: naam van de e-mailprovider
+en waar de gegevens worden opgeslagen].
 
 ## Geen andere gegevens
 
@@ -79,7 +91,7 @@ verzamelen geen andere persoonsgegevens dan hierboven beschreven.
 
 Je hebt het recht om je gegevens in te zien, te laten corrigeren of verwijderen, de verwerking
 te laten beperken, bezwaar te maken en je gegevens over te laten dragen. Neem daarvoor contact
-op via [IN TE VULLEN: e-mailadres voor privacyvragen]. We reageren binnen een maand.
+op via [info@nijmegenbloeit.online](mailto:info@nijmegenbloeit.online). We reageren binnen een maand.
 
 Ben je het niet eens met hoe we met je gegevens omgaan? Dan kun je een klacht indienen bij de
 [Autoriteit Persoonsgegevens](https://www.autoriteitpersoonsgegevens.nl/).

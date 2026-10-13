@@ -1,5 +1,5 @@
 /*
-  Nijmegen Bloeit
+  Nijmegen bloeit
   Rustige, stedelijke vormgeving. Systeemlettertypen: geen externe fonts.
   Kleuren staan als variabelen hieronder; alle tekstkleuren halen minimaal WCAG AA.
 */
@@ -248,6 +248,36 @@ main:focus {
   text-underline-offset: 0.4em;
 }
 
+/* Mobiel: de vier menu-items verdeeld over één volle regel, als menubalk onder het logo. */
+@media (max-width: 47.99em) {
+  .site-nav {
+    width: 100%;
+    border-top: 1px solid var(--kleur-lijn);
+  }
+
+  .site-nav ul {
+    justify-content: space-between;
+    margin: 0;
+    gap: 0;
+  }
+
+  .site-nav a {
+    padding: 0 0.25rem;
+    font-size: 0.9375rem;
+  }
+
+  .site-header__inner {
+    padding-bottom: 0;
+  }
+}
+
+@media (max-width: 22.5em) {
+  .site-nav a {
+    padding: 0 0.125rem;
+    font-size: 0.875rem;
+  }
+}
+
 @media (min-width: 48em) {
   .site-nav ul {
     margin: 0;
@@ -349,7 +379,7 @@ main:focus {
 
 .foto--breed img,
 .foto--breed .foto__vlak {
-  aspect-ratio: 21 / 9;
+  aspect-ratio: 16 / 9;
 }
 
 .hero .foto {
@@ -750,6 +780,33 @@ main:focus {
 .inhoudsopgave a {
   display: inline-block;
   padding-block: 0.25rem;
+}
+
+.qr {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--ruimte-2);
+  margin-bottom: var(--ruimte-3);
+}
+
+.qr img {
+  width: 160px;
+  height: 160px;
+  border: 1px solid var(--kleur-lijn);
+  border-radius: var(--radius);
+  background: #ffffff;
+}
+
+.qr p {
+  flex: 1 1 14rem;
+  margin: 0;
+  font-size: 0.9375rem;
+  color: var(--kleur-tekst-zacht);
+}
+
+.foto__bron a {
+  color: inherit;
 }
 
 /* ---------- Veelgestelde vragen (accordion) ---------- */

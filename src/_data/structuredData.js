@@ -6,10 +6,10 @@ export default {
   "@context": "https://schema.org",
   "@type": "Organization",
   name: site.naam,
-  alternateName: "Bloemerstraat en Omstreken",
   slogan: site.slogan.replace(/\.$/, ""),
   description: site.omschrijving,
   url: site.url + "/",
+  email: site.contact.email,
   areaServed: {
     "@type": "Place",
     name: "Bloemerstraat en omgeving, binnenstad Nijmegen",

@@ -2,13 +2,13 @@
 layout: layouts/page.njk
 title: Nieuwsbrief en veelgestelde vragen
 permalink: /nieuwsbrief/
-seoTitel: "Meedoen en nieuwsbrief | Nijmegen Bloeit"
-description: "Doe mee met Nijmegen Bloeit in Nijmegen: schrijf je in voor de nieuwsbrief en lees antwoorden op vragen over meehelpen, lidmaatschap en donaties."
+seoTitel: "Meedoen en nieuwsbrief | Nijmegen bloeit"
+description: "Doe mee met Nijmegen bloeit in Nijmegen: schrijf je in voor de nieuwsbrief en lees antwoorden op vragen over meehelpen, lidmaatschap en donaties."
 # Veelgestelde vragen. Voeg een vraag toe door een blok te kopiëren.
 # "antwoord" mag Markdown bevatten. Met "id" kun je ernaar linken (/nieuwsbrief/#id).
 # "toonContact: true" voegt de contacttekst uit site.js toe aan het antwoord.
 faq:
-  - vraag: Wat is het doel van Nijmegen Bloeit?
+  - vraag: Wat is het doel van Nijmegen bloeit?
     antwoord: >-
       We willen bijdragen aan een aantrekkelijkere, schonere en levendigere Bloemerstraat en
       omgeving. We beginnen met het verwijderen van graffiti. Op termijn willen we ook werken aan
@@ -29,9 +29,9 @@ faq:
       kan het gebied groter worden.
   - vraag: Hoe kan ik meehelpen?
     antwoord: >-
-      Op dit moment kun je je inschrijven voor de nieuwsbrief. Daarin lees je hoe het initiatief
-      zich ontwikkelt en wanneer er kanalen opengaan om actiever mee te doen. Je kunt ook nu al
-      bijdragen aan de graffitiaanpak van Nijmegen Bloeit door graffiti in de buurt te melden bij
+      Mail naar [info@nijmegenbloeit.online](mailto:info@nijmegenbloeit.online) als je wilt helpen. Schrijf je daarnaast in
+      voor de nieuwsbrief om op de hoogte te blijven van plannen en projecten. Je kunt ook nu al
+      bijdragen aan de graffitiaanpak van Nijmegen bloeit door graffiti in de buurt te melden bij
       de gemeente. Kijk daarvoor in de [wegwijzer](/wegwijzer/).
   - vraag: Kan ik lid worden? Moet ik contributie betalen?
     antwoord: >-
@@ -47,7 +47,7 @@ faq:
     toonContact: true
   - vraag: Is dit een website van de gemeente?
     antwoord: >-
-      Nee. Nijmegen Bloeit is een onafhankelijk buurtinitiatief. We verwijzen wel naar informatie
+      Nee. Nijmegen bloeit is een onafhankelijk buurtinitiatief. We verwijzen wel naar informatie
       van de gemeente Nijmegen, met een link naar de bron.
 ---
 {% from "components/macros.njk" import nieuwsbriefCta, faqLijst %}
@@ -61,7 +61,12 @@ termijn ook gevels, groen en het straatbeeld kunnen verbeteren.
 Schrijf je in voor de nieuwsbrief en blijf op de hoogte van plannen, projecten en
 mogelijkheden om mee te doen.
 
-{{ nieuwsbriefCta(site, titel="Inschrijven", tekst="Met de nieuwsbrief blijf je op de hoogte van Nijmegen Bloeit. Het is een nieuwsbrief om te ontvangen: je kunt er niet op reageren.") }}
+{{ nieuwsbriefCta(site, titel="Inschrijven", tekst="Met de nieuwsbrief blijf je op de hoogte van Nijmegen bloeit. Het is een nieuwsbrief om te ontvangen: je kunt er niet op reageren.") }}
+
+<div class="qr">
+  <img src="{{ site.nieuwsbrief.qrCode }}" alt="QR-code naar de inschrijfpagina van de nieuwsbrief" width="160" height="160" loading="lazy">
+  <p>Op een ander apparaat of om door te geven: scan deze QR-code om naar de inschrijfpagina te gaan.</p>
+</div>
 
 ### Zo werkt het inschrijven
 
@@ -78,8 +83,8 @@ Dat stellen we zeer op prijs. Het initiatief staat nog aan het begin en wordt mo
 initiatief groeit, creëren we meer mogelijkheden om mee te helpen, ideeën aan te dragen en
 projecten te organiseren.
 
-Op dit moment kun je je alleen inschrijven voor de nieuwsbrief. Later openen we kanalen om
-actiever deel te nemen; dat kondigen we aan in de nieuwsbrief. Een formeel lidmaatschap of
+Wil je helpen organiseren, of heb je een idee? Mail naar [info@nijmegenbloeit.online](mailto:info@nijmegenbloeit.online). De nieuwsbrief
+is om op de hoogte te blijven; je kunt er niet op reageren. Een formeel lidmaatschap of
 contributie is er nog niet.
 
 ## Veelgestelde vragen

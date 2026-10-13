@@ -1,7 +1,14 @@
 ---
 foto:
-  src: ""
-  alt: ""
+  src: /img/smetiusstraat-gevels.webp
+  alt: Rij panden met drie bouwlagen aan de Smetiusstraat, met hoge ramen en een winkel op de begane grond
+  breedte: 1600
+  hoogte: 1200
+  onderschrift: Gevels aan de Smetiusstraat, die uitkomt op de Bloemerstraat (2013)
+  maker: Havang(nl), via Wikimedia Commons
+  bronUrl: https://commons.wikimedia.org/wiki/File:Nijmegen_Smetiusstraat_4-6-8_overzicht.JPG
+  licentie: CC0
+  licentieUrl: https://creativecommons.org/publicdomain/zero/1.0/deed.nl
   beschrijving: gevels in de Bloemerstraat
 title: Gezamenlijke gevelverbetering
 volgorde: 2
@@ -13,7 +20,7 @@ samenvatting: >-
   De gevels in de Bloemerstraat samen opknappen: schoonmaken, schilderen, herstellen en
   passende verbeteringen. We onderzoeken nu of eigenaren hiervoor belangstelling hebben.
 doel: >-
-  Gebouwen in de straat die er schoon en verzorgd uitzien. Nijmegen Bloeit wil
+  Gebouwen in de straat die er schoon en verzorgd uitzien. Nijmegen bloeit wil
   eigenaren hiervoor bij elkaar brengen. Door het via het initiatief samen aan te pakken, wordt
   het werk overzichtelijker en kan een gezamenlijke subsidieaanvraag gunstiger uitvallen.
 gedaan:
@@ -26,8 +33,8 @@ volgende_stappen:
   - Kosten laten ramen, bij voorkeur met één gezamenlijke offerte.
   - De actuele subsidievoorwaarden bij de gemeente controleren.
 meedoen:
-  - "**Ben je eigenaar of verhuurder van een pand in de Bloemerstraat of omgeving?** Schrijf je in voor de nieuwsbrief. Daarin lees je wanneer en hoe eigenaren zich kunnen melden."
-  - "**Ken je een eigenaar?** Wijs diegene op Nijmegen Bloeit en dit project."
+  - "**Ben je eigenaar of verhuurder van een pand in de Bloemerstraat of omgeving?** Mail naar [info@nijmegenbloeit.online](mailto:info@nijmegenbloeit.online) als je belangstelling hebt. Schrijf je daarnaast in voor de nieuwsbrief om op de hoogte te blijven."
+  - "**Ken je een eigenaar?** Wijs diegene op Nijmegen bloeit en dit project."
 bronnen:
   - titel: Subsidie voor schoonmaken gevels binnenstad
     url: https://www.nijmegen.nl/diensten/monumenten/subsidie-schoonmaken-gevels/
@@ -39,7 +46,7 @@ bronnen:
 
 Vuil, verouderd schilderwerk en later aangebrachte reclames en betimmeringen bepalen voor een
 groot deel hoe de Bloemerstraat eruitziet. Een opknapbeurt kan veel verschil maken, zeker als
-meerdere panden tegelijk worden aangepakt. Nijmegen Bloeit wil eigenaren die dat
+meerdere panden tegelijk worden aangepakt. Nijmegen bloeit wil eigenaren die dat
 willen bij elkaar brengen en het proces samen met hen oppakken.
 
 <div class="let-op">

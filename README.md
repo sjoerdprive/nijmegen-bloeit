@@ -1,8 +1,8 @@
-# Nijmegen Bloeit
+# Nijmegen bloeit
 
-Website van het buurtinitiatief **Nijmegen Bloeit** in Nijmegen. *Laat de Bloemerstraat bloeien.*
+Website van het buurtinitiatief **Nijmegen bloeit** in Nijmegen. *Laat de Bloemerstraat bloeien.*
 
-Het is een statische website, gebouwd met [Eleventy](https://www.11ty.dev/). Bezoekers krijgen alleen HTML en CSS te zien: geen JavaScript, geen cookies, geen tracking en geen externe lettertypen. De nieuwsbrief loopt via een gewone link naar [Zendlijst](https://bloemerstraat-en-omstreken.zendlijst.nl/).
+Het is een statische website, gebouwd met [Eleventy](https://www.11ty.dev/). Bezoekers krijgen alleen HTML en CSS te zien: geen JavaScript, geen cookies, geen tracking en geen externe lettertypen. De nieuwsbrief loopt via een gewone link naar [Zendlijst](https://nijmegen-bloeit.zendlijst.nl/).
 
 ---
 
@@ -35,6 +35,7 @@ Je hoeft niet te programmeren om de inhoud bij te werken. Alle teksten staan in 
 | Over het initiatief | `src/over.md` |
 | Nieuwsbrief en veelgestelde vragen | `src/nieuwsbrief.md` (de vragen staan bovenaan in de lijst `faq:`) |
 | Privacyverklaring | `src/privacy.md` |
+| Toegankelijkheid | `src/toegankelijkheid.md` |
 | Kleuren en opmaak | `src/css/style.css` (kleuren staan bovenaan als variabelen) |
 
 De `.md`-bestanden gebruiken [Markdown](https://www.markdownguide.org/basic-syntax/): `**vet**`, `[linktekst](https://…)`, `## Kop`, enzovoort.
@@ -104,11 +105,17 @@ Op de homepage, de projectpagina's en de pagina "Over" staan fotoplekken. Zolang
 foto:
   src: /img/bloemerstraat-plein-1944.webp
   alt: De Bloemerstraat gezien vanaf Plein 1944, met winkels aan beide kanten
+  breedte: 1600                                     # afmetingen van het bestand
+  hoogte: 1067
   onderschrift: De Bloemerstraat, oktober 2026     # optioneel
+  maker: Naam fotograaf                             # bronvermelding, altijd invullen
+  bronUrl: https://…                                # waar de foto vandaan komt (optioneel bij eigen foto)
+  licentie: eigen foto                              # of bijv. CC BY 4.0
+  licentieUrl: https://…                            # optioneel
   beschrijving: de Bloemerstraat, bijvoorbeeld gezien vanaf Plein 1944   # alleen voor de placeholder
 ```
 
-Beschrijf in `alt` wat er op de foto te zien is. Gebruik alleen eigen foto's of foto's waarvoor je toestemming hebt, en vraag toestemming aan mensen die herkenbaar in beeld zijn. Wil je lege fotoplekken liever verbergen, zet dan `fotoPlaceholders` in `src/_data/site.js` op `false`.
+Vermeld altijd de bron: de site toont maker en licentie onder elke foto. Gebruik je een foto met een CC BY- of CC BY-SA-licentie, dan is die vermelding verplicht, net als het noemen van bewerkingen zoals een uitsnede (`bewerking:`). Beschrijf in `alt` wat er op de foto te zien is. Gebruik alleen eigen foto's of foto's waarvoor je toestemming hebt, en vraag toestemming aan mensen die herkenbaar in beeld zijn. Wil je lege fotoplekken liever verbergen, zet dan `fotoPlaceholders` in `src/_data/site.js` op `false`.
 
 ---
 
@@ -166,8 +173,8 @@ Een automatische scan vindt maar een deel van de toegankelijkheidsproblemen. Con
 
 ## Toon en inhoud
 
-- **Verbind gezamenlijke acties altijd aan het initiatief.** Of het nu gaat om graffiti melden, gevels of groen: presenteer het als iets wat je samen met Nijmegen Bloeit doet.
-- **De nieuwsbrief is alleen om te ontvangen.** Vraag mensen niet om via de nieuwsbrief iets te laten weten, ideeën in te sturen of zich aan te melden als vrijwilliger. Kanalen om actiever deel te nemen komen later; zolang die er niet zijn, verwijst de site daarvoor naar de nieuwsbrief als aankondiging.
+- **Verbind gezamenlijke acties altijd aan het initiatief.** Of het nu gaat om graffiti melden, gevels of groen: presenteer het als iets wat je samen met Nijmegen bloeit doet.
+- **De nieuwsbrief is alleen om te ontvangen.** Wie wil helpen, een idee heeft of vragen stelt, verwijs je naar info@nijmegenbloeit.online (`site.contact.email`), niet naar de nieuwsbrief.
 - **Geen loftuitingen over de naoorlogse bebouwing.** De wederopbouw mag feitelijk genoemd worden (bijvoorbeeld bij de gevelsubsidie), maar beschrijf de architectuur niet als iets wat de straat karakter geeft.
 - **Niet representatief.** Het initiatief spreekt niet namens alle bewoners of ondernemers; schrijf dus niet "namens de straat" of iets dergelijks.
 
@@ -179,19 +186,19 @@ Een automatische scan vindt maar een deel van de toegankelijkheidsproblemen. Con
 - **Geen cookies, dus geen cookiebanner.** Zendlijst gebruikt volgens zijn eigen privacy-informatie alleen functionele cookies op de eigen inschrijfpagina.
 - **Nieuwsbrief via een gewone link** naar Zendlijst, niet als ingebed formulier. We slaan zelf geen e-mailadressen op.
 - **Inhoud in datafiles** (`.yaml`, `.md`) en herbruikbare onderdelen (`src/_includes/components/macros.njk`: statuslabel, nieuwsbriefoproep, bronkaart, infoblok, projectkaart).
-- **Fotoplekken met placeholders.** Er zijn nog geen eigen buurtfoto's. Stockfoto's zijn bewust weggelaten; de placeholders zijn voor schermlezers verborgen.
+- **Foto's met bronvermelding.** Drie fotoplekken hebben een vrij te gebruiken foto van Wikimedia Commons, met maker, licentie en eventuele bewerking in het onderschrift. Stockfoto's zijn bewust weggelaten. De overige plekken tonen een placeholder, die voor schermlezers verborgen is.
 - **Afhankelijkheden** zijn alleen nodig tijdens het bouwen en testen (`devDependencies`). `npm audit` meldt enkele denial-of-service-kwetsbaarheden in de testhulpmiddelen; die raken de gepubliceerde site niet.
 
 ---
 
 ## Nog in te vullen of te beslissen
 
-- [ ] **Privacyverklaring** (`src/privacy.md`): naam van de verantwoordelijke, e-mailadres voor privacyvragen en de datum van vaststelling. Controleer de serverlogs van Netlify en of er een verwerkersovereenkomst met Zendlijst is. Zet daarna `noindex: false` en `sitemap: true` en verwijder het conceptblok bovenaan.
-- [ ] **Contactadres** (`src/_data/site.js` → `contact.email`), bijvoorbeeld een adres op `nijmegenbloeit.online`. Zolang dit leeg is, verwijst de FAQ naar de nieuwsbrief.
+- [ ] **Privacyverklaring** (`src/privacy.md`): naam van de verantwoordelijke, de bewaartermijn van e-mails, de naam van de e-mailprovider en de datum van vaststelling. Controleer de serverlogs van Netlify en of er een verwerkersovereenkomst met Zendlijst is. Zet daarna `noindex: false` en `sitemap: true` en verwijder het conceptblok bovenaan.
+- [x] **Contactadres**: info@nijmegenbloeit.online (`src/_data/site.js` → `contact.email`).
 - [ ] **Graffitiproject**: de naam van de gemeentelijke groep (alleen na bevestiging), concrete voortgang en manieren om mee te helpen. Werk ook `bijgewerkt:` bij.
-- [ ] **Foto's van de Bloemerstraat** voor de zes fotoplekken (zie "Foto's toevoegen"). Zet `fotoPlaceholders` op `false` als je live wilt gaan voordat alle foto's er zijn.
+- [ ] **Eigen foto's**: de graffitipagina (bij voorkeur een voor-en-na), de pagina over straatbeeld en winkelaanbod en de pagina "Over" hebben nog een placeholder. Eigen foto's van de Bloemerstraat kunnen ook de Wikimedia-foto's vervangen. Zet `fotoPlaceholders` op `false` als je live wilt gaan voordat alle foto's er zijn.
 - [ ] **Open Graph-afbeelding** (deelafbeelding voor sociale media), bijvoorbeeld een foto van de straat van 1200×630 px. Voeg daarna `og:image` toe in `src/_includes/layouts/base.njk`.
 - [ ] **Bestaande organisaties en initiatieven** voor de wegwijzer ("Samen iets organiseren"). Voeg ze pas toe nadat je ze hebt gecontroleerd.
 - [ ] **Bedrag subsidie wijkactiviteiten**: de gemeentepagina noemt geen bedrag. Vul het eventueel aan vanuit de officiële regeling.
-- [ ] **Zendlijst**: de nieuwsbrieflijst heet daar nog "Bloemerstraat en omstreken" (`bloemerstraat-en-omstreken.zendlijst.nl`). Pas de naam bij Zendlijst aan naar Nijmegen Bloeit. Krijgt de lijst een nieuw webadres, werk dan `nieuwsbrief.url` en `nieuwsbrief.privacyUrl` bij in `src/_data/site.js` en de link in `src/privacy.md`.
+- [ ] **Zendlijst**: de nieuwsbrief staat op `nijmegen-bloeit.zendlijst.nl`. De QR-code in `src/img/qr-nieuwsbrief.png` verwijst daarheen. Controleer bij een nieuw adres zowel `src/_data/site.js` als de QR-code.
 - [ ] **Periodieke controle**: loop de wegwijzer ongeveer elk halfjaar na en draai `npm run test:links`. Subsidieregelingen zijn vaak per jaar (bijvoorbeeld "2025" en "2026" in de namen van de regelingen).

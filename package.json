@@ -2,7 +2,7 @@
   "name": "nijmegen-bloeit",
   "version": "1.0.0",
   "private": true,
-  "description": "Website van het buurtinitiatief Nijmegen Bloeit (Nijmegen, nijmegenbloeit.online)",
+  "description": "Website van het buurtinitiatief Nijmegen bloeit (Nijmegen, nijmegenbloeit.online)",
   "type": "module",
   "engines": {
     "node": ">=20"

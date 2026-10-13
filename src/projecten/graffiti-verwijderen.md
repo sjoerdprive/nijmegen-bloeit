@@ -8,7 +8,7 @@ volgorde: 1
 status: lopend
 bijgewerkt: 2026-10-12
 seoTitel: "Graffiti verwijderen in de Bloemerstraat, Nijmegen"
-description: "Graffiti verwijderen in de Bloemerstraat in Nijmegen: zo pakt Nijmegen Bloeit het aan, samen met de gemeente. Lees hoe je graffiti meldt en kunt meehelpen."
+description: "Graffiti verwijderen in de Bloemerstraat in Nijmegen: zo pakt Nijmegen bloeit het aan, samen met de gemeente. Lees hoe je graffiti meldt en kunt meehelpen."
 samenvatting: >-
   Onze eerste concrete activiteit: graffiti in de Bloemerstraat en omgeving laten verdwijnen,
   samen met een bestaande gemeentelijke groep.
@@ -23,7 +23,7 @@ volgende_stappen:
   - Eigenaren van panden met graffiti wijzen op de mogelijkheid om graffiti te melden en toestemming te geven voor verwijdering.
   - Over de voortgang berichten via de nieuwsbrief.
 meedoen:
-  - "**Volg de graffitiaanpak van Nijmegen Bloeit** via de nieuwsbrief. Later openen we kanalen om actiever mee te doen; dat lees je in de nieuwsbrief."
+  - "**Wil je meehelpen met de graffitiaanpak van Nijmegen bloeit?** Mail naar [info@nijmegenbloeit.online](mailto:info@nijmegenbloeit.online). Via de nieuwsbrief blijf je op de hoogte van de voortgang."
   - "**Meld graffiti** in de buurt bij de gemeente, online of met de Meld & Herstel-app. Zie [Graffiti melden](https://www.nijmegen.nl/diensten/melden-aan-de-gemeente/graffiti-melden/). Zo draag je bij aan onze aanpak."
   - "**Ben je eigenaar van een pand?** De gemeente verwijdert graffiti op gebouwen alleen met jouw toestemming. Eén keer toestemming geven is genoeg voor latere meldingen."
   - "**Huur je je woning of winkel?** Meld graffiti dan eerst bij je verhuurder."
@@ -39,7 +39,7 @@ bronnen:
 Graffiti is een van de zichtbaarste dingen die afbreuk doen aan het straatbeeld van de
 Bloemerstraat en de binnenstad van Nijmegen. Het is ook iets wat je relatief snel en concreet
 kunt aanpakken. Daarom is dit het eerste project van
-Nijmegen Bloeit.
+Nijmegen bloeit.
 
 We werken hierbij samen met een bestaande gemeentelijke groep die zich met graffiti bezighoudt.
 Over resultaten berichten we pas als ze er echt zijn.
